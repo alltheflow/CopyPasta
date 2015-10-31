@@ -13,6 +13,9 @@
 		02C4888F1BE21A0F004FD281 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02C4888D1BE21A0F004FD281 /* Main.storyboard */; };
 		02C4889A1BE21A0F004FD281 /* PasteFlowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C488991BE21A0F004FD281 /* PasteFlowTests.swift */; };
 		02C488A51BE21A0F004FD281 /* PasteFlowUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C488A41BE21A0F004FD281 /* PasteFlowUITests.swift */; };
+		02C8B3911BE3FAE800203CF2 /* vincerp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02C8B3901BE3FAE800203CF2 /* vincerp.framework */; };
+		02C8B3921BE3FAE800203CF2 /* vincerp.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 02C8B3901BE3FAE800203CF2 /* vincerp.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		02C8B3951BE3FAFB00203CF2 /* vincerp.framework in Copy Carthage frameworks */ = {isa = PBXBuildFile; fileRef = 02C8B3901BE3FAE800203CF2 /* vincerp.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +35,31 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		02C8B3931BE3FAE800203CF2 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				02C8B3921BE3FAE800203CF2 /* vincerp.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		02C8B3941BE3FAEF00203CF2 /* Copy Carthage frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				02C8B3951BE3FAFB00203CF2 /* vincerp.framework in Copy Carthage frameworks */,
+			);
+			name = "Copy Carthage frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		02C488841BE21A0F004FD281 /* PasteFlow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PasteFlow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02C488871BE21A0F004FD281 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +73,7 @@
 		02C488A01BE21A0F004FD281 /* PasteFlowUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PasteFlowUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		02C488A41BE21A0F004FD281 /* PasteFlowUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasteFlowUITests.swift; sourceTree = "<group>"; };
 		02C488A61BE21A0F004FD281 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		02C8B3901BE3FAE800203CF2 /* vincerp.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = vincerp.framework; path = Carthage/Build/Mac/vincerp.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02C8B3911BE3FAE800203CF2 /* vincerp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				02C488861BE21A0F004FD281 /* PasteFlow */,
+				02C8B38F1BE3FAD000203CF2 /* Frameworks */,
 				02C488981BE21A0F004FD281 /* PasteFlowTests */,
 				02C488A31BE21A0F004FD281 /* PasteFlowUITests */,
 				02C488851BE21A0F004FD281 /* Products */,
@@ -122,6 +153,14 @@
 			path = PasteFlowUITests;
 			sourceTree = "<group>";
 		};
+		02C8B38F1BE3FAD000203CF2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				02C8B3901BE3FAE800203CF2 /* vincerp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,6 +171,8 @@
 				02C488801BE21A0F004FD281 /* Sources */,
 				02C488811BE21A0F004FD281 /* Frameworks */,
 				02C488821BE21A0F004FD281 /* Resources */,
+				02C8B3931BE3FAE800203CF2 /* Embed Frameworks */,
+				02C8B3941BE3FAEF00203CF2 /* Copy Carthage frameworks */,
 			);
 			buildRules = (
 			);
@@ -385,6 +426,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = PasteFlow/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vasarhelyia.PasteFlow;
@@ -397,6 +442,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = PasteFlow/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vasarhelyia.PasteFlow;
@@ -475,6 +524,7 @@
 				02C488AB1BE21A0F004FD281 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		02C488AC1BE21A0F004FD281 /* Build configuration list for PBXNativeTarget "PasteFlowTests" */ = {
 			isa = XCConfigurationList;
@@ -483,6 +533,7 @@
 				02C488AE1BE21A0F004FD281 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		02C488AF1BE21A0F004FD281 /* Build configuration list for PBXNativeTarget "PasteFlowUITests" */ = {
 			isa = XCConfigurationList;
@@ -491,6 +542,7 @@
 				02C488B11BE21A0F004FD281 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
