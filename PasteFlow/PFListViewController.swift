@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  PFListViewController.swift
 //  PasteFlow
 //
 //  Created by Agnes Vasarhelyi on 29/10/15.
@@ -8,7 +8,7 @@
 
 import Cocoa
 
-class ViewController: NSViewController {
+class PFListViewController: NSViewController {
     
     @IBOutlet weak var pasteLabel: NSTextField!
     @IBOutlet weak var pasteImageView: NSImageView!
