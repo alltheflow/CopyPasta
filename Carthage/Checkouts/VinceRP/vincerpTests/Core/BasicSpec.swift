@@ -3,7 +3,7 @@
 // Copyright (c) 2015 Viktor Belenyesi. All rights reserved.
 //
 
-@testable import vincerp
+@testable import VinceRP
 
 import Quick
 import Nimble
@@ -105,7 +105,7 @@ class BasicSpec: QuickSpec {
                     let a:Source<[Int]> = reactive([1, 2, 3])
                     let b = reactive(3)
                     let c = definedAs {
-                        a*.prepend(b*)
+                        a*.arrayByPrepending(b*)
                     }
                     let d = definedAs {
                         c*.map {
@@ -114,7 +114,7 @@ class BasicSpec: QuickSpec {
                     }
                     let e = reactive("wtf")
                     let f = definedAs {
-                        d*.appendAfter(e*).joinWithSeparator("")
+                        d*.arrayByAppending(e*).joinWithSeparator("")
                     }
 
                     // then
@@ -306,12 +306,12 @@ class BasicSpec: QuickSpec {
                     }
 
                     // when
-                    a <- NSError(domain: "vincerp", code: 1, userInfo: nil)
+                    a <- NSError(domain: "VinceRP", code: 1, userInfo: nil)
 
                     // then
                     expect(errors) == 1
                     expect(sideeffects) == 0
-                    expect(a.error().domain) == "vincerp"
+                    expect(a.error().domain) == "VinceRP"
                 }
 
                 it("works without storing the error handler") {

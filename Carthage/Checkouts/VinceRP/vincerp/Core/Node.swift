@@ -10,30 +10,24 @@ public class Node: Hashable, Equatable {
     public let hashValue = Int(Node.hashCounter.getAndIncrement())  // Hashable
 
     public var children: Set<Node> {
-        get {
-            return childrenHolder.value.filter {
-                $0.parents.contains(self)
-            }.set
-        }
+        return childrenHolder.value.filter {
+            $0.parents.contains(self)
+        }.set
     }
 
     public var descendants: Set<Node> {
-        get {
-            return children ++ children.flatMap {
-                $0.descendants
-            }
+        return children ++ children.flatMap {
+            $0.descendants
         }
     }
 
     public var parents: Set<Node> {
-        get {
-            fatalError(ABSTRACT_METHOD)
-        }
+        fatalError(ABSTRACT_METHOD)
     }
 
     public var ancestors: Set<Node> {
-        get {
-            fatalError(ABSTRACT_METHOD)
+        return parents ++ parents.flatMap {
+            $0.ancestors
         }
     }
 
@@ -47,8 +41,9 @@ public class Node: Hashable, Equatable {
 
     func linkChild(child: Node) {
         childrenHolder.spinSet { c in
-            guard (c.exists {$0 == child}) else {
-                return c.insert(child)
+            guard (c.hasElementPassingTest {$0 == child}) else {
+                c.insert(child)
+                return c
             }
             return c
         }
@@ -66,14 +61,18 @@ public class Node: Hashable, Equatable {
         fatalError(ABSTRACT_METHOD)
     }
     
+    private var alive = true
+    
     public func kill() {
-        fatalError(ABSTRACT_METHOD)
+        alive = false
+        parents.forEach {
+            $0.unlinkChild(self)
+        }
     }
 
+
     var level: long {
-        get {
-            fatalError(ABSTRACT_METHOD)
-        }
+        fatalError(ABSTRACT_METHOD)
     }
 
 }

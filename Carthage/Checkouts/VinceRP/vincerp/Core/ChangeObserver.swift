@@ -3,7 +3,7 @@
 // Copyright (c) 2015 Viktor Belenyesi. All rights reserved.
 //
 
-public class ChangeObserver: Reactor {
+public class ChangeObserver: Node {
     
     private static var changeObservers = Set<ChangeObserver>()
     
@@ -26,15 +26,11 @@ public class ChangeObserver: Reactor {
     }
     
     override public var parents: Set<Node> {
-        get {
-            return toSet(source)
-        }
+        return toSet(source)
     }
     
     override var level: long {
-        get {
-            return long.max
-        }
+        return long.max
     }
     
     override func ping(incoming: Set<Node>) -> Set<Node> {

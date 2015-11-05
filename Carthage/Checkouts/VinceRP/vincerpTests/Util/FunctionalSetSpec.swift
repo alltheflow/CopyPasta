@@ -3,7 +3,7 @@
 // Copyright (c) 2015 Viktor Belenyesi. All rights reserved.
 //
 
-@testable import vincerp
+@testable import VinceRP
 
 import Quick
 import Nimble
@@ -73,7 +73,7 @@ class FunctionalSetSpec: QuickSpec {
                 let s = toSet(1, 2, 3)
                 
                 // when
-                let r = s.exists{$0 > 2}
+                let r = s.hasElementPassingTest{$0 > 2}
                 
                 // then
                 expect(r) == true
@@ -84,7 +84,7 @@ class FunctionalSetSpec: QuickSpec {
                 let s = toSet(1, 2, 3)
                 
                 // when
-                let r = s.exists{$0 > 3}
+                let r = s.hasElementPassingTest{$0 > 3}
                 
                 // then
                 expect(r) == false

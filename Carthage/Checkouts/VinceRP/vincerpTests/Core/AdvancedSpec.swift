@@ -3,7 +3,7 @@
 // Copyright (c) 2015 Viktor Belenyesi. All rights reserved.
 //
 
-@testable import vincerp
+@testable import VinceRP
 
 import Quick
 import Nimble
@@ -478,7 +478,7 @@ class AdvancedSpec: QuickSpec {
             }
 
 
-            it("kills all Rx") {
+            it("kills all Hub") {
                 // given
                 let (a, _, c, d, e, f) = testGraph()
 

@@ -45,7 +45,7 @@ public class SpinSet<T:AnyObject>: AtomicReference<T> {
 }
 
 
-public class Incrementing<T:Equatable>: Rx<T> {
+public class Incrementing<T:Equatable>: Hub<T> {
 
     private let updateCount = AtomicLong(0)
     public var oldValue: SpinSet<SpinState<T>>?
@@ -79,8 +79,6 @@ public class Incrementing<T:Equatable>: Rx<T> {
 
 public class Spinlock<T:Equatable>: Incrementing<T> {
     
-    private let incrementingTrait = Incrementing<T>()
-
     override func ping(incoming: Set<Node>) -> Set<Node> {
         var oldValue: SpinState<T>? = nil
         
@@ -102,7 +100,6 @@ public class Spinlock<T:Equatable>: Incrementing<T> {
         }
         return children
     }
-
 
 }
 

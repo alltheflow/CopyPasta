@@ -3,7 +3,7 @@
 // Copyright (c) 2015 Viktor Belenyesi. All rights reserved.
 //
 
-public class WeakSet<T:Hashable where T:AnyObject>: AnyObject {
+public class WeakSet<T:Hashable where T:AnyObject> {
     private var _array: [WeakReference<T>]
 
     public init() {
@@ -17,27 +17,24 @@ public class WeakSet<T:Hashable where T:AnyObject>: AnyObject {
     }
     
     public var set: Set<T> {
-        get {
-            return Set(self.array())
-        }
+        return Set(self.array())
     }
 
-    public func insert(member: T) -> WeakSet<T> {
+    public func insert(member: T) {
         for e in _array {
             if e.hashValue == member.hashValue {
-                return self
+                return
             }
         }
         _array.append(WeakReference(member))
-        return self
     }
 
     public func filter(@noescape includeElement: (T) -> Bool) -> WeakSet<T> {
         return WeakSet(self.array().filter(includeElement))
     }
 
-    public func exists(@noescape filterFunc: (T) -> Bool) -> Bool {
-        return self.array().exists(filterFunc)
+    public func hasElementPassingTest(@noescape filterFunc: (T) -> Bool) -> Bool {
+        return self.array().hasElementPassingTest(filterFunc)
     }
 
     public func map<U>(@noescape transform: (T) -> U) -> WeakSet<U> {

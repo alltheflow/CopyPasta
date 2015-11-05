@@ -4,7 +4,7 @@
 //
 
 protocol UpdateProtocol {
-    func ancestors() -> [EmitterReactorTuple]
+    func ancestors() -> [NodeTuple]
 }
 
 public struct BatchUpdate<T:Equatable> {
@@ -15,7 +15,7 @@ public struct BatchUpdate<T:Equatable> {
     }
     
     init(updates: [UpdateProtocol], u: Update<T>) {
-        self.updates = updates.appendAfter(u)
+        self.updates = updates.arrayByAppending(u)
     }
     
     func and(v: Source<T>, withValue t: T) -> BatchUpdate {
@@ -23,7 +23,7 @@ public struct BatchUpdate<T:Equatable> {
     }
     
     func now() {
-        ImmediatePropagator().propagate(self.updates.flatMap {
+        Propagator().propagate(self.updates.flatMap {
             $0.ancestors()
         })
     }
@@ -40,9 +40,9 @@ struct Update<T:Equatable> : UpdateProtocol {
         v.updateSilent(t)
     }
     
-    func ancestors() -> [EmitterReactorTuple] {
+    func ancestors() -> [NodeTuple] {
         return Array(self.v.children).map {
-            EmitterReactorTuple($0, $0)
+            NodeTuple($0, $0)
         }
     }
     

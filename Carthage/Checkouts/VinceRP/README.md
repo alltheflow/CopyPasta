@@ -1,8 +1,11 @@
-[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage) [![Build Status](https://travis-ci.org/bvic23/VinceRP.svg?branch=master)](https://travis-ci.org/bvic23/VinceRP)
-
 VinceRP
 ======================================
-An easy to use, easy to extend reactive framework for Swift.
+Easy to use, easy to extend reactive framework for Swift.
+
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+[![Build Status](https://travis-ci.org/bvic23/VinceRP.svg?branch=master)](https://travis-ci.org/bvic23/VinceRP) [![Bitrise](https://www.bitrise.io/app/8eecd50149a499e2.svg?token=NF4ksh3VcIWYouCZPukE1w&branch=master)](https://www.bitrise.io/)
+[![codecov.io](http://codecov.io/github/bvic23/VinceRP/coverage.svg?branch=master)](http://codecov.io/github/bvic23/VinceRP?branch=master)
+[![MIT License](https://img.shields.io/badge/license-MIT%20License-blue.svg)](LICENSE)
 
 #Getting Started
 
@@ -31,7 +34,7 @@ The framework supports iOS & Mac for now.
 Let's see a basic example:
 
 ```swift
-import vincerp
+import VinceRP
 
 // define reactive sources
 let s1 = reactive(1)
@@ -52,7 +55,7 @@ print(sum*) // = 4
 Note that - thanks to Swift's type inference - it figures out the type of the sources and the `sum` as well. So the following won't compile:
 
 ```swift
-import vincerp
+import VinceRP
 
 let s = reactive(1)
 
@@ -66,7 +69,7 @@ However XCode 7.0 (7A218) gives a weird error message (`tuple pattern cannot mat
 Of course you can have side effects:
 
 ```swift
-import vincerp
+import VinceRP
 
 let s = reactive(1)
 var counter = 0
@@ -82,7 +85,7 @@ print(counter) // = 1
 If you don't want to count the initialization:
 
 ```swift
-import vincerp
+import VinceRP
 
 let s = reactive(1)
 var counter = 0
@@ -102,7 +105,7 @@ print(counter) // = 1
 If you're interested in errors:
 
 ```swift
-import vincerp
+import VinceRP
 
 let s = reactive(1)
 
@@ -206,4 +209,4 @@ Add it, ask for it... Any suggestions, bug reports, in the form of [issues](http
 
 #License
 
-[VinceRP is released under an MIT license.](https://github.com/bvic23/VinceRP/blob/master/LICENSE.md)
+[VinceRP is released under an MIT license.](https://github.com/bvic23/VinceRP/blob/master/LICENSE)
