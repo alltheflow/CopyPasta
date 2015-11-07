@@ -17,8 +17,9 @@ class PasteViewController: NSViewController {
         timer = NSTimer.scheduledTimerWithTimeInterval(1, target: pasteboardService, selector: "pollPasteboardItems", userInfo: nil, repeats: true)
         super.init(coder: aDecoder)
     }
+
     
-    override func viewDidLoad() {
+    override func awakeFromNib() {
         pasteboardService.pasteboardItems.onChange { items in
             if let item = items.first as? NSString {
                 print(item)
