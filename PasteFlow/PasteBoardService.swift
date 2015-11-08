@@ -13,10 +13,10 @@ class PasteboardService {
 
     let pasteboard = NSPasteboard.generalPasteboard()
     var pasteboardItems = reactive([AnyObject]())
-
     var changeCount = reactive(0)
 
     @objc func pollPasteboardItems() {
+
         if self.changeCount* != self.pasteboard.changeCount {
             guard let items = self.pasteboard.readObjectsForClasses([NSString.self], options: nil) else {
                 return
