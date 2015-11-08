@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		026771D21BE924D5002B79F4 /* PasteboardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026771D11BE924D5002B79F4 /* PasteboardService.swift */; };
 		02C488881BE21A0F004FD281 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C488871BE21A0F004FD281 /* AppDelegate.swift */; };
-		02C4888A1BE21A0F004FD281 /* PasteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C488891BE21A0F004FD281 /* PasteViewController.swift */; };
+		02C4888A1BE21A0F004FD281 /* PasteboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C488891BE21A0F004FD281 /* PasteboardViewController.swift */; };
 		02C4888C1BE21A0F004FD281 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02C4888B1BE21A0F004FD281 /* Assets.xcassets */; };
 		02C4888F1BE21A0F004FD281 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02C4888D1BE21A0F004FD281 /* Main.storyboard */; };
 		02C4889A1BE21A0F004FD281 /* PasteFlowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C488991BE21A0F004FD281 /* PasteFlowTests.swift */; };
@@ -17,6 +17,7 @@
 		02C8B3911BE3FAE800203CF2 /* vincerp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02C8B3901BE3FAE800203CF2 /* vincerp.framework */; };
 		02C8B3921BE3FAE800203CF2 /* vincerp.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 02C8B3901BE3FAE800203CF2 /* vincerp.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		02C8B3951BE3FAFB00203CF2 /* vincerp.framework in Copy Carthage frameworks */ = {isa = PBXBuildFile; fileRef = 02C8B3901BE3FAE800203CF2 /* vincerp.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		02CD87441BEFA3D700C149AF /* PasteboardItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02CD87431BEFA3D700C149AF /* PasteboardItemCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,7 +66,7 @@
 		026771D11BE924D5002B79F4 /* PasteboardService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasteboardService.swift; sourceTree = "<group>"; };
 		02C488841BE21A0F004FD281 /* PasteFlow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PasteFlow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02C488871BE21A0F004FD281 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		02C488891BE21A0F004FD281 /* PasteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasteViewController.swift; sourceTree = "<group>"; };
+		02C488891BE21A0F004FD281 /* PasteboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasteboardViewController.swift; sourceTree = "<group>"; };
 		02C4888B1BE21A0F004FD281 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		02C4888E1BE21A0F004FD281 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		02C488901BE21A0F004FD281 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -76,6 +77,7 @@
 		02C488A41BE21A0F004FD281 /* PasteFlowUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasteFlowUITests.swift; sourceTree = "<group>"; };
 		02C488A61BE21A0F004FD281 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		02C8B3901BE3FAE800203CF2 /* vincerp.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = vincerp.framework; path = Carthage/Build/Mac/vincerp.framework; sourceTree = "<group>"; };
+		02CD87431BEFA3D700C149AF /* PasteboardItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PasteboardItemCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,11 +131,12 @@
 			isa = PBXGroup;
 			children = (
 				02C488871BE21A0F004FD281 /* AppDelegate.swift */,
-				02C488891BE21A0F004FD281 /* PasteViewController.swift */,
+				02C488891BE21A0F004FD281 /* PasteboardViewController.swift */,
 				026771D11BE924D5002B79F4 /* PasteboardService.swift */,
 				02C4888B1BE21A0F004FD281 /* Assets.xcassets */,
 				02C4888D1BE21A0F004FD281 /* Main.storyboard */,
 				02C488901BE21A0F004FD281 /* Info.plist */,
+				02CD87431BEFA3D700C149AF /* PasteboardItemCell.xib */,
 			);
 			path = PasteFlow;
 			sourceTree = "<group>";
@@ -271,6 +274,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				02C4888C1BE21A0F004FD281 /* Assets.xcassets in Resources */,
+				02CD87441BEFA3D700C149AF /* PasteboardItemCell.xib in Resources */,
 				02C4888F1BE21A0F004FD281 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -296,7 +300,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				02C4888A1BE21A0F004FD281 /* PasteViewController.swift in Sources */,
+				02C4888A1BE21A0F004FD281 /* PasteboardViewController.swift in Sources */,
 				02C488881BE21A0F004FD281 /* AppDelegate.swift in Sources */,
 				026771D21BE924D5002B79F4 /* PasteboardService.swift in Sources */,
 			);

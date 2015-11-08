@@ -12,16 +12,17 @@ import VinceRP
 class PasteboardService {
 
     let pasteboard = NSPasteboard.generalPasteboard()
-    var pasteboardItems = reactive([AnyObject]())
-    var changeCount = reactive(0)
+    let pasteboardItems = reactive([AnyObject]())
+    let changeCount = reactive(0)
 
     @objc func pollPasteboardItems() {
 
         if self.changeCount* != self.pasteboard.changeCount {
-            guard let items = self.pasteboard.readObjectsForClasses([NSString.self], options: nil) else {
+            guard let items = self.pasteboard.readObjectsForClasses([NSString.self], options: nil) where
+                items.count > 0 else {
                 return
             }
-            self.pasteboardItems <- items
+            self.pasteboardItems <- self.pasteboardItems*.arrayByAppending(items.first!)
             self.changeCount <- self.pasteboard.changeCount
         }
     }
