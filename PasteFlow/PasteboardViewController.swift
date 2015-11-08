@@ -36,8 +36,8 @@ class PasteboardViewController: NSViewController, NSCollectionViewDataSource, NS
     }
 
     override func awakeFromNib() {
-        let nib = NSNib(nibNamed: "PasteboardItemCell", bundle: nil)
-        collectionView.registerNib(nib, forItemWithIdentifier: "PasteboardItemCell")
+        let nib = NSNib(nibNamed: "TextItemCell", bundle: nil)
+        collectionView.registerNib(nib, forItemWithIdentifier: "TextItemCell")
         pasteboardService.pasteboardItems.onChange { _ in self.collectionView.reloadData(); self.collectionView.layout() }
     }
 
@@ -48,7 +48,7 @@ class PasteboardViewController: NSViewController, NSCollectionViewDataSource, NS
     }
 
     func collectionView(collectionView: NSCollectionView, itemForRepresentedObjectAtIndexPath indexPath: NSIndexPath) -> NSCollectionViewItem {
-        let cell = collectionView.makeItemWithIdentifier("PasteboardItemCell", forIndexPath: indexPath)
+        let cell = collectionView.makeItemWithIdentifier("TextItemCell", forIndexPath: indexPath)
         let title = pasteboardService.pasteboardItems.value()[indexPath.item] as! String
         cell.textField!.stringValue = title
         return cell
