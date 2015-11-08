@@ -9,6 +9,20 @@
 import Cocoa
 import VinceRP
 
+class PasteboardLayout: NSCollectionViewFlowLayout {
+    
+    override func layoutAttributesForItemAtIndexPath(indexPath: NSIndexPath) -> NSCollectionViewLayoutAttributes? {
+        let attributes = super.layoutAttributesForItemAtIndexPath(indexPath)
+        attributes?.size = CGSizeMake((attributes?.size.width)!, CGFloat(indexPath.item) * CGFloat(20))
+        return attributes
+    }
+    
+    override func layoutAttributesForElementsInRect(rect: NSRect) -> [NSCollectionViewLayoutAttributes] {
+        return super.layoutAttributesForElementsInRect(rect)
+    }
+
+}
+
 class PasteboardViewController: NSViewController, NSCollectionViewDataSource, NSCollectionViewDelegate {
 
     var timer: NSTimer
@@ -24,7 +38,7 @@ class PasteboardViewController: NSViewController, NSCollectionViewDataSource, NS
     override func awakeFromNib() {
         let nib = NSNib(nibNamed: "PasteboardItemCell", bundle: nil)
         collectionView.registerNib(nib, forItemWithIdentifier: "PasteboardItemCell")
-        pasteboardService.pasteboardItems.onChange { _ in self.collectionView.reloadData() }
+        pasteboardService.pasteboardItems.onChange { _ in self.collectionView.reloadData(); self.collectionView.layout() }
     }
 
     // MARK: NSCollectionViewDataSource
