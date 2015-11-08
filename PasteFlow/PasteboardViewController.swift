@@ -9,21 +9,7 @@
 import Cocoa
 import VinceRP
 
-class PasteboardLayout: NSCollectionViewFlowLayout {
-    
-    override func layoutAttributesForItemAtIndexPath(indexPath: NSIndexPath) -> NSCollectionViewLayoutAttributes? {
-        let attributes = super.layoutAttributesForItemAtIndexPath(indexPath)
-        attributes?.size = CGSizeMake((attributes?.size.width)!, CGFloat(indexPath.item) * CGFloat(20))
-        return attributes
-    }
-    
-    override func layoutAttributesForElementsInRect(rect: NSRect) -> [NSCollectionViewLayoutAttributes] {
-        return super.layoutAttributesForElementsInRect(rect)
-    }
-
-}
-
-class PasteboardViewController: NSViewController, NSCollectionViewDataSource, NSCollectionViewDelegate {
+class PasteboardViewController: NSViewController, NSCollectionViewDataSource, NSCollectionViewDelegate, NSCollectionViewDelegateFlowLayout {
 
     var timer: NSTimer
     let pasteboardService = PasteboardService()
@@ -36,9 +22,13 @@ class PasteboardViewController: NSViewController, NSCollectionViewDataSource, NS
     }
 
     override func awakeFromNib() {
-        let nib = NSNib(nibNamed: "TextItemCell", bundle: nil)
-        collectionView.registerNib(nib, forItemWithIdentifier: "TextItemCell")
-        pasteboardService.pasteboardItems.onChange { _ in self.collectionView.reloadData(); self.collectionView.layout() }
+        let textItemNib = NSNib(nibNamed: "TextItemCell", bundle: nil)
+        let imageItemNib = NSNib(nibNamed: "ImageItemCell", bundle: nil)
+
+        collectionView.registerNib(textItemNib, forItemWithIdentifier: "TextItemCell")
+        collectionView.registerNib(imageItemNib, forItemWithIdentifier: "ImageItemCell")
+
+        pasteboardService.pasteboardItems.onChange { _ in self.collectionView.reloadData() }
     }
 
     // MARK: NSCollectionViewDataSource
@@ -48,10 +38,25 @@ class PasteboardViewController: NSViewController, NSCollectionViewDataSource, NS
     }
 
     func collectionView(collectionView: NSCollectionView, itemForRepresentedObjectAtIndexPath indexPath: NSIndexPath) -> NSCollectionViewItem {
-        let cell = collectionView.makeItemWithIdentifier("TextItemCell", forIndexPath: indexPath)
-        let title = pasteboardService.pasteboardItems.value()[indexPath.item] as! String
-        cell.textField!.stringValue = title
+        var cell = NSCollectionViewItem()
+        if let item = pasteboardService.pasteboardItems.value()[indexPath.item] as? String {
+            cell = collectionView.makeItemWithIdentifier("TextItemCell", forIndexPath: indexPath)
+            cell.textField!.stringValue = item
+        } else if let item = pasteboardService.pasteboardItems.value()[indexPath.item] as? NSImage {
+            cell = collectionView.makeItemWithIdentifier("ImageItemCell", forIndexPath: indexPath)
+            cell.imageView!.image = item
+        }
         return cell
     }
+    
+    
+    func collectionView(collectionView: NSCollectionView, layout collectionViewLayout: NSCollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> NSSize {
+        if let item = pasteboardService.pasteboardItems.value()[indexPath.item] as? NSImage {
+            print("\(item.size.height)")
+            return NSSize(width: 500, height: item.size.height > 300 ? 300 : item.size.height)
+        } else {
+            return NSSize(width: 500, height: 50)
+        }
 
+    }
 }

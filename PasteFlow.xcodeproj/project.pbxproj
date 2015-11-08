@@ -18,6 +18,7 @@
 		02C8B3921BE3FAE800203CF2 /* vincerp.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 02C8B3901BE3FAE800203CF2 /* vincerp.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		02C8B3951BE3FAFB00203CF2 /* vincerp.framework in Copy Carthage frameworks */ = {isa = PBXBuildFile; fileRef = 02C8B3901BE3FAE800203CF2 /* vincerp.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		02CD87441BEFA3D700C149AF /* TextItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02CD87431BEFA3D700C149AF /* TextItemCell.xib */; };
+		02CD87481BEFDA6700C149AF /* ImageItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02CD87471BEFDA6700C149AF /* ImageItemCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,7 @@
 		02C488A61BE21A0F004FD281 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		02C8B3901BE3FAE800203CF2 /* vincerp.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = vincerp.framework; path = Carthage/Build/Mac/vincerp.framework; sourceTree = "<group>"; };
 		02CD87431BEFA3D700C149AF /* TextItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextItemCell.xib; sourceTree = "<group>"; };
+		02CD87471BEFDA6700C149AF /* ImageItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageItemCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +181,7 @@
 				02C488891BE21A0F004FD281 /* PasteboardViewController.swift */,
 				02C4888D1BE21A0F004FD281 /* Main.storyboard */,
 				02CD87431BEFA3D700C149AF /* TextItemCell.xib */,
+				02CD87471BEFDA6700C149AF /* ImageItemCell.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -289,6 +292,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02CD87481BEFDA6700C149AF /* ImageItemCell.xib in Resources */,
 				02C4888C1BE21A0F004FD281 /* Assets.xcassets in Resources */,
 				02CD87441BEFA3D700C149AF /* TextItemCell.xib in Resources */,
 				02C4888F1BE21A0F004FD281 /* Main.storyboard in Resources */,

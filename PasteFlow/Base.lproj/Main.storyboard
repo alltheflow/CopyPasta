@@ -684,7 +684,7 @@
                                         <collectionView ambiguous="YES" id="vEm-aG-uy3">
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <animations/>
-                                            <collectionViewFlowLayout key="collectionViewLayout" id="6Zh-kY-v1H" customClass="PasteboardLayout" customModule="PasteFlow" customModuleProvider="target">
+                                            <collectionViewFlowLayout key="collectionViewLayout" id="6Zh-kY-v1H">
                                                 <size key="itemSize" width="500" height="50"/>
                                             </collectionViewFlowLayout>
                                             <color key="primaryBackgroundColor" red="0.90588235289999997" green="0.90588235289999997" blue="0.90588235289999997" alpha="1" colorSpace="calibratedRGB"/>
