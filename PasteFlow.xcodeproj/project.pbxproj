@@ -130,13 +130,10 @@
 		02C488861BE21A0F004FD281 /* PasteFlow */ = {
 			isa = PBXGroup;
 			children = (
-				02C488871BE21A0F004FD281 /* AppDelegate.swift */,
-				02C488891BE21A0F004FD281 /* PasteboardViewController.swift */,
+				02CD87461BEFA99600C149AF /* View */,
 				026771D11BE924D5002B79F4 /* PasteboardService.swift */,
-				02C4888B1BE21A0F004FD281 /* Assets.xcassets */,
-				02C4888D1BE21A0F004FD281 /* Main.storyboard */,
-				02C488901BE21A0F004FD281 /* Info.plist */,
-				02CD87431BEFA3D700C149AF /* PasteboardItemCell.xib */,
+				02C488871BE21A0F004FD281 /* AppDelegate.swift */,
+				02CD87451BEFA98200C149AF /* Supporting Files */,
 			);
 			path = PasteFlow;
 			sourceTree = "<group>";
@@ -165,6 +162,25 @@
 				02C8B3901BE3FAE800203CF2 /* vincerp.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		02CD87451BEFA98200C149AF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				02C4888B1BE21A0F004FD281 /* Assets.xcassets */,
+				02C488901BE21A0F004FD281 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		02CD87461BEFA99600C149AF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				02C488891BE21A0F004FD281 /* PasteboardViewController.swift */,
+				02C4888D1BE21A0F004FD281 /* Main.storyboard */,
+				02CD87431BEFA3D700C149AF /* PasteboardItemCell.xib */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
