@@ -49,14 +49,13 @@ class PasteboardViewController: NSViewController, NSCollectionViewDataSource, NS
         return cell
     }
     
-    
     func collectionView(collectionView: NSCollectionView, layout collectionViewLayout: NSCollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> NSSize {
         if let item = pasteboardService.pasteboardItems.value()[indexPath.item] as? NSImage {
-            print("\(item.size.height)")
-            return NSSize(width: 500, height: item.size.height > 300 ? 300 : item.size.height)
+            return NSSize(width: collectionView.frame.size.width, height: item.size.height > 200 ? 200 : item.size.height)
         } else {
-            return NSSize(width: 500, height: 50)
+            return NSSize(width: collectionView.frame.size.width, height: 50)
         }
 
     }
+
 }

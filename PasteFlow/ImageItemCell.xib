@@ -28,7 +28,7 @@
                 <constraint firstItem="V2v-ao-dje" firstAttribute="top" secondItem="XNJ-6Y-0eu" secondAttribute="top" id="WL8-Ou-RmO"/>
             </constraints>
             <animations/>
-            <point key="canvasLocation" x="416" y="246"/>
+            <point key="canvasLocation" x="353" y="169"/>
         </view>
         <collectionViewItem id="oJD-e0-5hs">
             <connections>

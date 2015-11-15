@@ -18,8 +18,8 @@ class PasteboardService {
     @objc func pollPasteboardItems() {
 
         if self.changeCount* != self.pasteboard.changeCount {
-            guard let items = self.pasteboard.readObjectsForClasses([NSString.self, NSImage.self], options: nil) where
-                items.count > 0 else {
+            guard let items = self.pasteboard.readObjectsForClasses([NSString.self, NSImage.self, NSURL.self], options: nil)
+                where items.count > 0 else {
                 return
             }
             self.pasteboardItems <- self.pasteboardItems*.arrayByAppending(items.first!)
