@@ -13,6 +13,8 @@ class PasteboardViewController: NSViewController, NSCollectionViewDataSource, NS
 
     var timer: NSTimer
     let pasteboardService = PasteboardService()
+    let textItemCellID = "TextItemCell"
+    let imageItemCellID = "ImageItemCell"
 
     @IBOutlet weak var collectionView: NSCollectionView!
     @IBOutlet weak var countLabel: NSTextField!
@@ -24,11 +26,11 @@ class PasteboardViewController: NSViewController, NSCollectionViewDataSource, NS
     }
 
     override func awakeFromNib() {
-        let textItemNib = NSNib(nibNamed: "TextItemCell", bundle: nil)
-        let imageItemNib = NSNib(nibNamed: "ImageItemCell", bundle: nil)
+        let textItemNib = NSNib(nibNamed: textItemCellID, bundle: nil)
+        let imageItemNib = NSNib(nibNamed: imageItemCellID, bundle: nil)
 
-        collectionView.registerNib(textItemNib, forItemWithIdentifier: "TextItemCell")
-        collectionView.registerNib(imageItemNib, forItemWithIdentifier: "ImageItemCell")
+        collectionView.registerNib(textItemNib, forItemWithIdentifier: textItemCellID)
+        collectionView.registerNib(imageItemNib, forItemWithIdentifier: imageItemCellID)
 
         pasteboardService.pasteboardItems.dispatchOnMainQueue().onChange { _ in self.collectionView.reloadData() }
         
@@ -47,10 +49,10 @@ class PasteboardViewController: NSViewController, NSCollectionViewDataSource, NS
     func collectionView(collectionView: NSCollectionView, itemForRepresentedObjectAtIndexPath indexPath: NSIndexPath) -> NSCollectionViewItem {
         var cell = NSCollectionViewItem()
         if let item = pasteboardService.pasteboardItems.value()[indexPath.item] as? String {
-            cell = collectionView.makeItemWithIdentifier("TextItemCell", forIndexPath: indexPath)
+            cell = collectionView.makeItemWithIdentifier(textItemCellID, forIndexPath: indexPath)
             cell.textField!.stringValue = item
         } else if let item = pasteboardService.pasteboardItems.value()[indexPath.item] as? NSImage {
-            cell = collectionView.makeItemWithIdentifier("ImageItemCell", forIndexPath: indexPath)
+            cell = collectionView.makeItemWithIdentifier(imageItemCellID, forIndexPath: indexPath)
             cell.imageView!.image = item
         }
         return cell
@@ -62,7 +64,7 @@ class PasteboardViewController: NSViewController, NSCollectionViewDataSource, NS
         } else {
             return NSSize(width: collectionView.frame.size.width, height: 50)
         }
-
     }
 
+    
 }
