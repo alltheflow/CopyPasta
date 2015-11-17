@@ -13,10 +13,12 @@ class PasteboardViewController: NSViewController, NSCollectionViewDataSource, NS
 
     var timer: NSTimer
     let pasteboardService = PasteboardService()
-    
+
     @IBOutlet weak var collectionView: NSCollectionView!
-    
+    @IBOutlet weak var countLabel: NSTextField!
+
     required init?(coder aDecoder: NSCoder) {
+        // no KVO unfortunately
         timer = NSTimer.scheduledTimerWithTimeInterval(1, target: pasteboardService, selector: "pollPasteboardItems", userInfo: nil, repeats: true)
         super.init(coder: aDecoder)
     }
@@ -28,7 +30,12 @@ class PasteboardViewController: NSViewController, NSCollectionViewDataSource, NS
         collectionView.registerNib(textItemNib, forItemWithIdentifier: "TextItemCell")
         collectionView.registerNib(imageItemNib, forItemWithIdentifier: "ImageItemCell")
 
-        pasteboardService.pasteboardItems.onChange { _ in self.collectionView.reloadData() }
+        pasteboardService.pasteboardItems.dispatchOnMainQueue().onChange { _ in self.collectionView.reloadData() }
+        
+        countLabel.reactiveText = self.pasteboardService.pasteboardItems.map { ("\($0.count) items") }
+        countLabel.reactiveHidden = definedAs {
+            self.pasteboardService.changeCount* == 0
+        }
     }
 
     // MARK: NSCollectionViewDataSource
