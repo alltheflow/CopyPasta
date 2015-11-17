@@ -22,7 +22,10 @@ class PasteboardService {
                 where items.count > 0 else {
                 return
             }
-            self.pasteboardItems <- self.pasteboardItems*.arrayByAppending(items.first!)
+            guard let item = items.first else {
+                return
+            }
+            self.pasteboardItems <- self.pasteboardItems*.arrayByAppending(item)
             self.changeCount <- self.pasteboard.changeCount
         }
     }
