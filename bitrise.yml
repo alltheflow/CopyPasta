@@ -1,0 +1,35 @@
+format_version: 1.1.0
+default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
+
+app:
+  envs:
+  - BITRISE_PROJECT_PATH: "./PasteFlow.xcodeproj"
+  - BITRISE_SCHEME: PasteFlow
+  - BUILD_TOOL: xctool
+
+trigger_map:
+- pattern: "*"
+  is_pull_request_allowed: true
+  workflow: test
+
+workflows:
+  test:
+    steps:
+    - script:
+        inputs:
+        - content: |-
+            #!/bin/bash
+            set -e
+            set -x
+            # NOTE: xctool doesn't support running Xcode 7 UI tests!!
+            #  link: https://github.com/facebook/xctool/issues/534
+            xcodebuild -project $BITRISE_PROJECT_PATH -scheme $BITRISE_SCHEME test
+  archive:
+    steps:
+    - script:
+        inputs:
+        - content: |-
+            #!/bin/bash
+            set -e
+            set -x
+            $BUILD_TOOL -project $BITRISE_PROJECT_PATH -scheme $BITRISE_SCHEME archive
