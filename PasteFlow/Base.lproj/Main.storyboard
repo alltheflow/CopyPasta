@@ -681,7 +681,7 @@
                                     <rect key="frame" x="1" y="1" width="498" height="478"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <collectionView id="vEm-aG-uy3">
+                                        <collectionView selectable="YES" id="vEm-aG-uy3">
                                             <rect key="frame" x="0.0" y="0.0" width="498" height="478"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <animations/>

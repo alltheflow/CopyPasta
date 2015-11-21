@@ -29,5 +29,14 @@ class PasteboardService {
             self.changeCount <- self.pasteboard.changeCount
         }
     }
+    
+    func addItemToPasteboard(item: NSString) {
+        pasteboard.clearContents()
+        pasteboardItems.filter { pbItem in
+            return pbItem != item
+        }
+        pollPasteboardItems()
+        pasteboard.writeObjects([item])
+    }
 
 }

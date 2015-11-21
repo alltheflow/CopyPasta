@@ -48,10 +48,13 @@ class PasteboardViewController: NSViewController, NSCollectionViewDataSource, NS
 
     func collectionView(collectionView: NSCollectionView, itemForRepresentedObjectAtIndexPath indexPath: NSIndexPath) -> NSCollectionViewItem {
         var cell = NSCollectionViewItem()
-        if let item = pasteboardService.pasteboardItems.value()[indexPath.item] as? String {
+        let items = pasteboardService.pasteboardItems*
+        let index = items.count - 1 - indexPath.item
+
+        if let item = items[index] as? String {
             cell = collectionView.makeItemWithIdentifier(textItemCellID, forIndexPath: indexPath)
             cell.textField!.stringValue = item
-        } else if let item = pasteboardService.pasteboardItems.value()[indexPath.item] as? NSImage {
+        } else if let item = items[index] as? NSImage {
             cell = collectionView.makeItemWithIdentifier(imageItemCellID, forIndexPath: indexPath)
             cell.imageView!.image = item
         }
@@ -66,5 +69,13 @@ class PasteboardViewController: NSViewController, NSCollectionViewDataSource, NS
         }
     }
 
+    // MARK: NSCollectionViewDelegate
+    
+    func collectionView(collectionView: NSCollectionView, didSelectItemsAtIndexPaths indexPaths: Set<NSIndexPath>) {
+        let items = pasteboardService.pasteboardItems*
+        let index = items.count - 1 - indexPaths.first!.item
+        let item = items[index]
+        pasteboardService.addItemToPasteboard(item as! NSString)
+    }
     
 }
