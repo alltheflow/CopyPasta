@@ -28,21 +28,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     // MARK: popover actions
 
-    func showPopover(sender: AnyObject?) {
-        if let button = statusItem.button {
-            popover.showRelativeToRect(button.bounds, ofView: button, preferredEdge: .MinY)
-        }
-    }
-    
-    func closePopover(sender: AnyObject?) {
-        popover.performClose(sender)
-    }
-    
     func togglePopover(sender: AnyObject?) {
         if popover.shown {
-            closePopover(sender)
+            popover.performClose(sender)
         } else {
-            showPopover(sender)
+            if let button = statusItem.button {
+                popover.showRelativeToRect(button.bounds, ofView: button, preferredEdge: .MinY)
+            }
         }
     }
 }
