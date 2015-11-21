@@ -19,10 +19,14 @@ class PasteboardViewController: NSViewController, NSCollectionViewDataSource, NS
     @IBOutlet weak var collectionView: NSCollectionView!
     @IBOutlet weak var countLabel: NSTextField!
 
-    required init?(coder aDecoder: NSCoder) {
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         // no KVO unfortunately
         timer = NSTimer.scheduledTimerWithTimeInterval(1, target: pasteboardService, selector: "pollPasteboardItems", userInfo: nil, repeats: true)
-        super.init(coder: aDecoder)
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)!
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
 
     override func awakeFromNib() {

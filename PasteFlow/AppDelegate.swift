@@ -12,13 +12,38 @@ import VinceRP
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
     
+    let statusItem = NSStatusBar.systemStatusBar().statusItemWithLength(-2)
+    let popover = NSPopover()
+
     func applicationDidFinishLaunching(aNotification: NSNotification) {
-        // Insert code here to initialize your application
+        if let button = statusItem.button {
+            button.image = NSImage(named: "NSPathTemplate")
+            button.action = Selector("togglePopover:")
+        }
+        
+        popover.contentViewController = PasteboardViewController(nibName: "PasteboardViewController", bundle: nil)
     }
 
-    func applicationWillTerminate(aNotification: NSNotification) {
-        // Insert code here to tear down your application
-    }
+    func applicationWillTerminate(aNotification: NSNotification) { }
 
+    // MARK: popover actions
+
+    func showPopover(sender: AnyObject?) {
+        if let button = statusItem.button {
+            popover.showRelativeToRect(button.bounds, ofView: button, preferredEdge: .MinY)
+        }
+    }
+    
+    func closePopover(sender: AnyObject?) {
+        popover.performClose(sender)
+    }
+    
+    func togglePopover(sender: AnyObject?) {
+        if popover.shown {
+            closePopover(sender)
+        } else {
+            showPopover(sender)
+        }
+    }
 }
 
