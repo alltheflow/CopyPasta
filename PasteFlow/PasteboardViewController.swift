@@ -53,12 +53,11 @@ class PasteboardViewController: NSViewController, NSCollectionViewDataSource, NS
     func collectionView(collectionView: NSCollectionView, itemForRepresentedObjectAtIndexPath indexPath: NSIndexPath) -> NSCollectionViewItem {
         var cell = NSCollectionViewItem()
         let items = pasteboardService.pasteboardItems*
-        let index = items.count - 1 - indexPath.item
 
-        if let item = items[index] as? String {
+        if let item = items[indexPath.item] as? String {
             cell = collectionView.makeItemWithIdentifier(textItemCellID, forIndexPath: indexPath)
             cell.textField!.stringValue = item
-        } else if let item = items[index] as? NSImage {
+        } else if let item = items[indexPath.item] as? NSImage {
             cell = collectionView.makeItemWithIdentifier(imageItemCellID, forIndexPath: indexPath)
             cell.imageView!.image = item
         }
@@ -66,7 +65,8 @@ class PasteboardViewController: NSViewController, NSCollectionViewDataSource, NS
     }
     
     func collectionView(collectionView: NSCollectionView, layout collectionViewLayout: NSCollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> NSSize {
-        if let item = pasteboardService.pasteboardItems.value()[indexPath.item] as? NSImage {
+        let items = pasteboardService.pasteboardItems*
+        if let item = items[indexPath.item] as? NSImage {
             return NSSize(width: collectionView.frame.size.width, height: item.size.height > 200 ? 200 : item.size.height)
         } else {
             return NSSize(width: collectionView.frame.size.width, height: 50)
@@ -77,7 +77,7 @@ class PasteboardViewController: NSViewController, NSCollectionViewDataSource, NS
     
     func collectionView(collectionView: NSCollectionView, didSelectItemsAtIndexPaths indexPaths: Set<NSIndexPath>) {
         let items = pasteboardService.pasteboardItems*
-        let index = items.count - 1 - indexPaths.first!.item
+        let index = indexPaths.first!.item
         let item = items[index]
         pasteboardService.addItemToPasteboard(item as! NSString)
     }
