@@ -54,10 +54,10 @@ class PasteboardViewController: NSViewController, NSCollectionViewDataSource, NS
         var cell = NSCollectionViewItem()
         let items = pasteboardService.pasteboardItems*
 
-        if let item = items[indexPath.item] as? String {
+        if let item = items[indexPath.item].content as? String {
             cell = collectionView.makeItemWithIdentifier(textItemCellID, forIndexPath: indexPath)
             cell.textField!.stringValue = item
-        } else if let item = items[indexPath.item] as? NSImage {
+        } else if let item = items[indexPath.item].content as? NSImage {
             cell = collectionView.makeItemWithIdentifier(imageItemCellID, forIndexPath: indexPath)
             cell.imageView!.image = item
         }
@@ -66,11 +66,7 @@ class PasteboardViewController: NSViewController, NSCollectionViewDataSource, NS
     
     func collectionView(collectionView: NSCollectionView, layout collectionViewLayout: NSCollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> NSSize {
         let items = pasteboardService.pasteboardItems*
-        if let item = items[indexPath.item] as? NSImage {
-            return NSSize(width: collectionView.frame.size.width, height: item.size.height > 200 ? 200 : item.size.height)
-        } else {
-            return NSSize(width: collectionView.frame.size.width, height: 50)
-        }
+        return sizeForItem(items[indexPath.item])
     }
 
     // MARK: NSCollectionViewDelegate
@@ -79,7 +75,17 @@ class PasteboardViewController: NSViewController, NSCollectionViewDataSource, NS
         let items = pasteboardService.pasteboardItems*
         let index = indexPaths.first!.item
         let item = items[index]
-        pasteboardService.addItemToPasteboard(item as! NSString)
+        pasteboardService.addItemToPasteboard(item)
+    }
+    
+    // MARK: Helper functions
+    
+    func sizeForItem(item: PasteboardItem) -> NSSize {
+        var height:CGFloat = 50.0
+        if item.kind == .Image {
+            height = item.content.size.height > 200.0 ? 200.0 : item.content.size.height
+        }
+        return NSSize(width: collectionView.frame.size.width, height: height)
     }
     
 }
