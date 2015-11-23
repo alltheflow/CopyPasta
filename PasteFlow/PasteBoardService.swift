@@ -15,6 +15,8 @@ class PasteboardService {
     let pasteboardItems = reactive([PasteboardItem]())
     let changeCount = reactive(0)
 
+    // MARK: public methods
+
     @objc func pollPasteboardItems() {
 
         if (changeCount* != pasteboard.changeCount) {
@@ -41,8 +43,10 @@ class PasteboardService {
         pasteboard.writeObjects([item.content as! NSPasteboardWriting])
         pollPasteboardItems()
     }
-    
-    func pasteboardItem(item: AnyObject?) -> PasteboardItem? {
+
+    // MARK: private methods
+
+    private func pasteboardItem(item: AnyObject?) -> PasteboardItem? {
         let kind:PasteboardItem.Kind
         
         if item is NSString {
