@@ -9,10 +9,10 @@
 /* Begin PBXBuildFile section */
 		026771D21BE924D5002B79F4 /* PasteboardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026771D11BE924D5002B79F4 /* PasteboardService.swift */; };
 		02801C321C035333000817CE /* PasteboardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02801C311C035333000817CE /* PasteboardItem.swift */; };
+		02801C351C0354F7000817CE /* PasteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02801C341C0354F7000817CE /* PasteViewModel.swift */; };
 		02C488881BE21A0F004FD281 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C488871BE21A0F004FD281 /* AppDelegate.swift */; };
 		02C4888A1BE21A0F004FD281 /* PasteboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C488891BE21A0F004FD281 /* PasteboardViewController.swift */; };
 		02C4889A1BE21A0F004FD281 /* PasteFlowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C488991BE21A0F004FD281 /* PasteFlowTests.swift */; };
-		02C488A51BE21A0F004FD281 /* PasteFlowUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C488A41BE21A0F004FD281 /* PasteFlowUITests.swift */; };
 		02C8B3911BE3FAE800203CF2 /* vincerp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02C8B3901BE3FAE800203CF2 /* vincerp.framework */; };
 		02C8B3921BE3FAE800203CF2 /* vincerp.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 02C8B3901BE3FAE800203CF2 /* vincerp.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		02C8B3951BE3FAFB00203CF2 /* vincerp.framework in Copy Carthage frameworks */ = {isa = PBXBuildFile; fileRef = 02C8B3901BE3FAE800203CF2 /* vincerp.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -25,13 +25,6 @@
 
 /* Begin PBXContainerItemProxy section */
 		02C488961BE21A0F004FD281 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 02C4887C1BE21A0F004FD281 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 02C488831BE21A0F004FD281;
-			remoteInfo = PasteFlow;
-		};
-		02C488A11BE21A0F004FD281 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 02C4887C1BE21A0F004FD281 /* Project object */;
 			proxyType = 1;
@@ -68,6 +61,7 @@
 /* Begin PBXFileReference section */
 		026771D11BE924D5002B79F4 /* PasteboardService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasteboardService.swift; sourceTree = "<group>"; };
 		02801C311C035333000817CE /* PasteboardItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasteboardItem.swift; sourceTree = "<group>"; };
+		02801C341C0354F7000817CE /* PasteViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasteViewModel.swift; sourceTree = "<group>"; };
 		02C488841BE21A0F004FD281 /* PasteFlow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PasteFlow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02C488871BE21A0F004FD281 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		02C488891BE21A0F004FD281 /* PasteboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasteboardViewController.swift; sourceTree = "<group>"; };
@@ -75,9 +69,6 @@
 		02C488951BE21A0F004FD281 /* PasteFlowTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PasteFlowTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		02C488991BE21A0F004FD281 /* PasteFlowTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasteFlowTests.swift; sourceTree = "<group>"; };
 		02C4889B1BE21A0F004FD281 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		02C488A01BE21A0F004FD281 /* PasteFlowUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PasteFlowUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		02C488A41BE21A0F004FD281 /* PasteFlowUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasteFlowUITests.swift; sourceTree = "<group>"; };
-		02C488A61BE21A0F004FD281 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		02C8B3901BE3FAE800203CF2 /* vincerp.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = vincerp.framework; path = Carthage/Build/Mac/vincerp.framework; sourceTree = "<group>"; };
 		02CD87431BEFA3D700C149AF /* TextItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextItemCell.xib; sourceTree = "<group>"; };
 		02CD87471BEFDA6700C149AF /* ImageItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageItemCell.xib; sourceTree = "<group>"; };
@@ -102,13 +93,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		02C4889D1BE21A0F004FD281 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -120,13 +104,20 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
+		02801C331C0354E7000817CE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				02801C341C0354F7000817CE /* PasteViewModel.swift */,
+			);
+			name = ViewModel;
+			sourceTree = "<group>";
+		};
 		02C4887B1BE21A0F004FD281 = {
 			isa = PBXGroup;
 			children = (
 				02C488861BE21A0F004FD281 /* PasteFlow */,
 				02C8B38F1BE3FAD000203CF2 /* Frameworks */,
 				02C488981BE21A0F004FD281 /* PasteFlowTests */,
-				02C488A31BE21A0F004FD281 /* PasteFlowUITests */,
 				02C488851BE21A0F004FD281 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -136,7 +127,6 @@
 			children = (
 				02C488841BE21A0F004FD281 /* PasteFlow.app */,
 				02C488951BE21A0F004FD281 /* PasteFlowTests.xctest */,
-				02C488A01BE21A0F004FD281 /* PasteFlowUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -144,6 +134,7 @@
 		02C488861BE21A0F004FD281 /* PasteFlow */ = {
 			isa = PBXGroup;
 			children = (
+				02801C331C0354E7000817CE /* ViewModel */,
 				02801C301C03531F000817CE /* Model */,
 				02CD87461BEFA99600C149AF /* View */,
 				026771D11BE924D5002B79F4 /* PasteboardService.swift */,
@@ -160,15 +151,6 @@
 				02C4889B1BE21A0F004FD281 /* Info.plist */,
 			);
 			path = PasteFlowTests;
-			sourceTree = "<group>";
-		};
-		02C488A31BE21A0F004FD281 /* PasteFlowUITests */ = {
-			isa = PBXGroup;
-			children = (
-				02C488A41BE21A0F004FD281 /* PasteFlowUITests.swift */,
-				02C488A61BE21A0F004FD281 /* Info.plist */,
-			);
-			path = PasteFlowUITests;
 			sourceTree = "<group>";
 		};
 		02C8B38F1BE3FAD000203CF2 /* Frameworks */ = {
@@ -240,24 +222,6 @@
 			productReference = 02C488951BE21A0F004FD281 /* PasteFlowTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		02C4889F1BE21A0F004FD281 /* PasteFlowUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 02C488AF1BE21A0F004FD281 /* Build configuration list for PBXNativeTarget "PasteFlowUITests" */;
-			buildPhases = (
-				02C4889C1BE21A0F004FD281 /* Sources */,
-				02C4889D1BE21A0F004FD281 /* Frameworks */,
-				02C4889E1BE21A0F004FD281 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				02C488A21BE21A0F004FD281 /* PBXTargetDependency */,
-			);
-			name = PasteFlowUITests;
-			productName = PasteFlowUITests;
-			productReference = 02C488A01BE21A0F004FD281 /* PasteFlowUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -272,10 +236,6 @@
 						CreatedOnToolsVersion = 7.1;
 					};
 					02C488941BE21A0F004FD281 = {
-						CreatedOnToolsVersion = 7.1;
-						TestTargetID = 02C488831BE21A0F004FD281;
-					};
-					02C4889F1BE21A0F004FD281 = {
 						CreatedOnToolsVersion = 7.1;
 						TestTargetID = 02C488831BE21A0F004FD281;
 					};
@@ -296,7 +256,6 @@
 			targets = (
 				02C488831BE21A0F004FD281 /* PasteFlow */,
 				02C488941BE21A0F004FD281 /* PasteFlowTests */,
-				02C4889F1BE21A0F004FD281 /* PasteFlowUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -321,13 +280,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		02C4889E1BE21A0F004FD281 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -337,6 +289,7 @@
 			files = (
 				02C4888A1BE21A0F004FD281 /* PasteboardViewController.swift in Sources */,
 				02C488881BE21A0F004FD281 /* AppDelegate.swift in Sources */,
+				02801C351C0354F7000817CE /* PasteViewModel.swift in Sources */,
 				026771D21BE924D5002B79F4 /* PasteboardService.swift in Sources */,
 				02801C321C035333000817CE /* PasteboardItem.swift in Sources */,
 			);
@@ -350,14 +303,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		02C4889C1BE21A0F004FD281 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				02C488A51BE21A0F004FD281 /* PasteFlowUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -365,11 +310,6 @@
 			isa = PBXTargetDependency;
 			target = 02C488831BE21A0F004FD281 /* PasteFlow */;
 			targetProxy = 02C488961BE21A0F004FD281 /* PBXContainerItemProxy */;
-		};
-		02C488A21BE21A0F004FD281 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 02C488831BE21A0F004FD281 /* PasteFlow */;
-			targetProxy = 02C488A11BE21A0F004FD281 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -512,32 +452,6 @@
 			};
 			name = Release;
 		};
-		02C488B01BE21A0F004FD281 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = PasteFlowUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.vasarhelyia.PasteFlowUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = PasteFlow;
-				USES_XCTRUNNER = YES;
-			};
-			name = Debug;
-		};
-		02C488B11BE21A0F004FD281 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = PasteFlowUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.vasarhelyia.PasteFlowUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = PasteFlow;
-				USES_XCTRUNNER = YES;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -564,15 +478,6 @@
 			buildConfigurations = (
 				02C488AD1BE21A0F004FD281 /* Debug */,
 				02C488AE1BE21A0F004FD281 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		02C488AF1BE21A0F004FD281 /* Build configuration list for PBXNativeTarget "PasteFlowUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				02C488B01BE21A0F004FD281 /* Debug */,
-				02C488B11BE21A0F004FD281 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

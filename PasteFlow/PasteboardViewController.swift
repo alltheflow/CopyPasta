@@ -11,17 +11,14 @@ import VinceRP
 
 class PasteboardViewController: NSViewController, NSCollectionViewDataSource, NSCollectionViewDelegate, NSCollectionViewDelegateFlowLayout {
 
-    var timer: NSTimer
-    let pasteboardService = PasteboardService()
     let textItemCellID = "TextItemCell"
     let imageItemCellID = "ImageItemCell"
-
+    let pasteViewModel = PasteViewModel()
+    
     @IBOutlet weak var collectionView: NSCollectionView!
     @IBOutlet weak var countLabel: NSTextField!
 
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
-        // no KVO unfortunately
-        timer = NSTimer.scheduledTimerWithTimeInterval(1, target: pasteboardService, selector: "pollPasteboardItems", userInfo: nil, repeats: true)
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)!
     }
 
@@ -36,28 +33,24 @@ class PasteboardViewController: NSViewController, NSCollectionViewDataSource, NS
         collectionView.registerNib(textItemNib, forItemWithIdentifier: textItemCellID)
         collectionView.registerNib(imageItemNib, forItemWithIdentifier: imageItemCellID)
 
-        pasteboardService.pasteboardItems.dispatchOnMainQueue().onChange { _ in self.collectionView.reloadData() }
-        
-        countLabel.reactiveText = self.pasteboardService.pasteboardItems.map { ("\($0.count) items") }
-        countLabel.reactiveHidden = definedAs {
-            self.pasteboardService.changeCount* == 0
-        }
+        pasteViewModel.pasteboardItems.dispatchOnMainQueue().onChange { _ in self.collectionView.reloadData() }
+        countLabel.reactiveText = self.pasteViewModel.pasteboardItems.map { ("\($0.count) items") }
     }
 
     // MARK: NSCollectionViewDataSource
 
     func collectionView(collectionView: NSCollectionView, numberOfItemsInSection section: Int) -> Int {
-        return pasteboardService.pasteboardItems*.count
+        return pasteViewModel.pasteboardItems*.count
     }
 
     func collectionView(collectionView: NSCollectionView, itemForRepresentedObjectAtIndexPath indexPath: NSIndexPath) -> NSCollectionViewItem {
         var cell = NSCollectionViewItem()
-        let items = pasteboardService.pasteboardItems*
+        let content = pasteViewModel.itemAtIndex(indexPath.item).content
 
-        if let item = items[indexPath.item].content as? String {
+        if let item = content as? String {
             cell = collectionView.makeItemWithIdentifier(textItemCellID, forIndexPath: indexPath)
             cell.textField!.stringValue = item
-        } else if let item = items[indexPath.item].content as? NSImage {
+        } else if let item = content as? NSImage {
             cell = collectionView.makeItemWithIdentifier(imageItemCellID, forIndexPath: indexPath)
             cell.imageView!.image = item
         }
@@ -65,17 +58,14 @@ class PasteboardViewController: NSViewController, NSCollectionViewDataSource, NS
     }
     
     func collectionView(collectionView: NSCollectionView, layout collectionViewLayout: NSCollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> NSSize {
-        let items = pasteboardService.pasteboardItems*
+        let items = pasteViewModel.pasteboardItems*
         return sizeForItem(items[indexPath.item])
     }
 
     // MARK: NSCollectionViewDelegate
     
     func collectionView(collectionView: NSCollectionView, didSelectItemsAtIndexPaths indexPaths: Set<NSIndexPath>) {
-        let items = pasteboardService.pasteboardItems*
-        let index = indexPaths.first!.item
-        let item = items[index]
-        pasteboardService.addItemToPasteboard(item)
+        pasteViewModel.selectItemAtIndex(indexPaths.first!.item)
     }
     
     // MARK: Helper functions
