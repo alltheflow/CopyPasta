@@ -14,7 +14,6 @@
 		02C4888A1BE21A0F004FD281 /* PasteboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C488891BE21A0F004FD281 /* PasteboardViewController.swift */; };
 		02C4889A1BE21A0F004FD281 /* PasteFlowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C488991BE21A0F004FD281 /* PasteFlowTests.swift */; };
 		02C8B3911BE3FAE800203CF2 /* vincerp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02C8B3901BE3FAE800203CF2 /* vincerp.framework */; };
-		02C8B3921BE3FAE800203CF2 /* vincerp.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 02C8B3901BE3FAE800203CF2 /* vincerp.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		02C8B3951BE3FAFB00203CF2 /* vincerp.framework in Copy Carthage frameworks */ = {isa = PBXBuildFile; fileRef = 02C8B3901BE3FAE800203CF2 /* vincerp.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		02CD87441BEFA3D700C149AF /* TextItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02CD87431BEFA3D700C149AF /* TextItemCell.xib */; };
 		02CD87481BEFDA6700C149AF /* ImageItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02CD87471BEFDA6700C149AF /* ImageItemCell.xib */; };
@@ -34,17 +33,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		02C8B3931BE3FAE800203CF2 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				02C8B3921BE3FAE800203CF2 /* vincerp.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		02C8B3941BE3FAEF00203CF2 /* Copy Carthage frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -192,7 +180,6 @@
 				02C488801BE21A0F004FD281 /* Sources */,
 				02C488811BE21A0F004FD281 /* Frameworks */,
 				02C488821BE21A0F004FD281 /* Resources */,
-				02C8B3931BE3FAE800203CF2 /* Embed Frameworks */,
 				02C8B3941BE3FAEF00203CF2 /* Copy Carthage frameworks */,
 			);
 			buildRules = (
