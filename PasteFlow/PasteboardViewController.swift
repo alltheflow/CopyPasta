@@ -24,6 +24,10 @@ class PasteboardViewController: NSViewController, NSCollectionViewDataSource, NS
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+//    override func loadView() {
+//        self.view = PastePopoverRootView()
+//    }
 
     override func awakeFromNib() {
         let textItemNib = NSNib(nibNamed: textItemCellID, bundle: nil)
@@ -70,7 +74,7 @@ class PasteboardViewController: NSViewController, NSCollectionViewDataSource, NS
     // MARK: Helper functions
     
     func sizeForItem(item: PasteboardItem) -> NSSize {
-        var height:CGFloat = 50.0
+        var height:CGFloat = 110.0
         if item.kind == .Image {
             height = item.content.size.height > 200.0 ? 200.0 : item.content.size.height
         }

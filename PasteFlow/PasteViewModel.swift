@@ -15,7 +15,7 @@ class PasteViewModel {
     init() {
         timer(1.0) {
             self.pasteboardService.pollPasteboardItems()
-        }
+        }        
     }
     
     var pasteboardItems: Hub<[PasteboardItem]> {
