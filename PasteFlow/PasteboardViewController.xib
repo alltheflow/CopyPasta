@@ -15,21 +15,21 @@
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <view id="GiI-00-Etf">
-            <rect key="frame" x="0.0" y="0.0" width="500" height="500"/>
+            <rect key="frame" x="0.0" y="0.0" width="388" height="512"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
                 <scrollView autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jG1-2X-yCP">
-                    <rect key="frame" x="0.0" y="20" width="500" height="480"/>
-                    <clipView key="contentView" id="oEG-tT-hIM">
-                        <rect key="frame" x="1" y="1" width="498" height="478"/>
+                    <rect key="frame" x="0.0" y="20" width="388" height="492"/>
+                    <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="oEG-tT-hIM">
+                        <rect key="frame" x="1" y="1" width="386" height="490"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView selectable="YES" id="2Ud-RC-71x">
-                                <rect key="frame" x="0.0" y="0.0" width="498" height="478"/>
+                                <rect key="frame" x="0.0" y="0.0" width="386" height="490"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <animations/>
                                 <collectionViewFlowLayout key="collectionViewLayout" id="s7h-k0-I2h">
-                                    <size key="itemSize" width="500" height="50"/>
+                                    <size key="itemSize" width="388" height="50"/>
                                 </collectionViewFlowLayout>
                                 <color key="primaryBackgroundColor" red="0.90588235289999997" green="0.90588235289999997" blue="0.90588235289999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
@@ -40,6 +40,10 @@
                         </subviews>
                         <animations/>
                     </clipView>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="388" id="EJf-b5-VKD"/>
+                        <constraint firstAttribute="height" constant="492" id="LtD-Jd-too"/>
+                    </constraints>
                     <animations/>
                     <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="ggZ-Lb-Dzf">
                         <rect key="frame" x="1" y="144" width="233" height="15"/>
@@ -53,9 +57,10 @@
                     </scroller>
                 </scrollView>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Aas-mC-Vcb">
-                    <rect key="frame" x="0.0" y="0.0" width="504" height="20"/>
+                    <rect key="frame" x="0.0" y="0.0" width="388" height="22"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="20" id="zGN-U4-jq5"/>
+                        <constraint firstAttribute="width" constant="384" id="J2L-Ac-8Nx"/>
+                        <constraint firstAttribute="height" constant="22" id="Tbl-0C-8QZ"/>
                     </constraints>
                     <animations/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" id="FFG-0k-MQo">
@@ -66,13 +71,10 @@
                 </textField>
             </subviews>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="jG1-2X-yCP" secondAttribute="trailing" id="0jU-4Y-vBj"/>
-                <constraint firstItem="Aas-mC-Vcb" firstAttribute="top" secondItem="jG1-2X-yCP" secondAttribute="bottom" id="MPe-8C-2Rq"/>
-                <constraint firstAttribute="bottom" secondItem="jG1-2X-yCP" secondAttribute="bottom" constant="20" id="Wb4-ht-ezk"/>
-                <constraint firstItem="Aas-mC-Vcb" firstAttribute="leading" secondItem="GiI-00-Etf" secondAttribute="leading" constant="2" id="b55-el-6FV"/>
-                <constraint firstAttribute="trailing" secondItem="Aas-mC-Vcb" secondAttribute="trailing" constant="-2" id="f9E-0r-tYS"/>
-                <constraint firstItem="jG1-2X-yCP" firstAttribute="top" secondItem="GiI-00-Etf" secondAttribute="top" id="lZi-bX-z5r"/>
-                <constraint firstItem="jG1-2X-yCP" firstAttribute="leading" secondItem="GiI-00-Etf" secondAttribute="leading" id="xg7-W5-StF"/>
+                <constraint firstAttribute="bottom" secondItem="Aas-mC-Vcb" secondAttribute="bottom" id="P70-9g-MxL"/>
+                <constraint firstItem="Aas-mC-Vcb" firstAttribute="centerX" secondItem="2Ud-RC-71x" secondAttribute="centerX" id="cnA-k9-vLb"/>
+                <constraint firstItem="jG1-2X-yCP" firstAttribute="top" secondItem="GiI-00-Etf" secondAttribute="top" id="gA8-0Y-f6O"/>
+                <constraint firstItem="jG1-2X-yCP" firstAttribute="leading" secondItem="GiI-00-Etf" secondAttribute="leading" id="qBC-E2-ha2"/>
             </constraints>
             <animations/>
         </view>
