@@ -7,7 +7,6 @@
 //
 
 import Cocoa
-import VinceRP
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
