@@ -20,6 +20,8 @@
 		02F54B6A1C00BFD400093553 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02F54B691C00BFD400093553 /* MainMenu.xib */; };
 		02F54B6C1C00C24E00093553 /* PasteboardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02F54B6B1C00C24E00093553 /* PasteboardViewController.xib */; };
 		02F54B701C00C6E100093553 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02F54B6F1C00C6E100093553 /* Assets.xcassets */; };
+		791F31451C049CC6004AA9E2 /* PastePopoverRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F31441C049CC6004AA9E2 /* PastePopoverRootView.swift */; };
+		791F31471C049D0C004AA9E2 /* PastePopoverBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F31461C049D0C004AA9E2 /* PastePopoverBackgroundView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,8 @@
 		02F54B691C00BFD400093553 /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
 		02F54B6B1C00C24E00093553 /* PasteboardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PasteboardViewController.xib; sourceTree = "<group>"; };
 		02F54B6F1C00C6E100093553 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		791F31441C049CC6004AA9E2 /* PastePopoverRootView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PastePopoverRootView.swift; path = View/Popover/PastePopoverRootView.swift; sourceTree = "<group>"; };
+		791F31461C049D0C004AA9E2 /* PastePopoverBackgroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PastePopoverBackgroundView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +165,7 @@
 		02CD87461BEFA99600C149AF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				791F31431C049C8B004AA9E2 /* Popover */,
 				02C488891BE21A0F004FD281 /* PasteboardViewController.swift */,
 				02CD87471BEFDA6700C149AF /* ImageItemCell.xib */,
 				02F54B691C00BFD400093553 /* MainMenu.xib */,
@@ -168,6 +173,15 @@
 				02CD87431BEFA3D700C149AF /* TextItemCell.xib */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		791F31431C049C8B004AA9E2 /* Popover */ = {
+			isa = PBXGroup;
+			children = (
+				791F31441C049CC6004AA9E2 /* PastePopoverRootView.swift */,
+				791F31461C049D0C004AA9E2 /* PastePopoverBackgroundView.swift */,
+			);
+			name = Popover;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,6 +288,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				791F31451C049CC6004AA9E2 /* PastePopoverRootView.swift in Sources */,
+				791F31471C049D0C004AA9E2 /* PastePopoverBackgroundView.swift in Sources */,
 				02C4888A1BE21A0F004FD281 /* PasteboardViewController.swift in Sources */,
 				02C488881BE21A0F004FD281 /* AppDelegate.swift in Sources */,
 				02801C351C0354F7000817CE /* PasteViewModel.swift in Sources */,
