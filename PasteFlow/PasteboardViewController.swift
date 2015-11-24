@@ -82,8 +82,7 @@ class PasteboardViewController: NSViewController, NSCollectionViewDataSource, NS
         case .Text( _):
             return NSSize(width: w, height: 110.0)
         case .Image(let image):
-            let h = image.size.height > 200.0 ? 200.0 : image.size.height
-            return NSSize(width: w, height: h)
+            return NSSize(width: w, height: 229.0)
         default: break
         }
         return NSSize(width: w, height: 50.0)
