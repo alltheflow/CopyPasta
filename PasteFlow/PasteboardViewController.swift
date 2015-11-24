@@ -36,8 +36,10 @@ class PasteboardViewController: NSViewController, NSCollectionViewDataSource, NS
         collectionView.registerNib(textItemNib, forItemWithIdentifier: textItemCellID)
         collectionView.registerNib(imageItemNib, forItemWithIdentifier: imageItemCellID)
 
+        countLabel.reactiveText = pasteViewModel.pasteboardItems.dispatchOnMainQueue().map {
+            "\($0.count) items"
+        }
         pasteViewModel.pasteboardItems.dispatchOnMainQueue().onChange { _ in self.collectionView.reloadData() }
-        countLabel.reactiveText = self.pasteViewModel.pasteboardItems.map { ("\($0.count) items") }
     }
 
     // MARK: NSCollectionViewDataSource
@@ -79,9 +81,9 @@ class PasteboardViewController: NSViewController, NSCollectionViewDataSource, NS
     func sizeForItem(item: PasteboardItem) -> NSSize {
         let w = collectionView.frame.size.width
         switch (item) {
-        case .Text( _):
+        case .Text(_):
             return NSSize(width: w, height: 110.0)
-        case .Image(let image):
+        case .Image(_):
             return NSSize(width: w, height: 229.0)
         default: break
         }

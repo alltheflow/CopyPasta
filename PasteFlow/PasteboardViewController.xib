@@ -8,7 +8,7 @@
         <customObject id="-2" userLabel="File's Owner" customClass="PasteboardViewController" customModule="PasteFlow" customModuleProvider="target">
             <connections>
                 <outlet property="collectionView" destination="2Ud-RC-71x" id="NX2-rj-uok"/>
-                <outlet property="countLabel" destination="Aas-mC-Vcb" id="BJd-YS-cHw"/>
+                <outlet property="countLabel" destination="Aas-mC-Vcb" id="9BM-Kd-s8w"/>
                 <outlet property="view" destination="GiI-00-Etf" id="7fj-WL-YbJ"/>
             </connections>
         </customObject>
