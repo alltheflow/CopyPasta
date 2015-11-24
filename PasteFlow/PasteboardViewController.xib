@@ -8,7 +8,6 @@
         <customObject id="-2" userLabel="File's Owner" customClass="PasteboardViewController" customModule="PasteFlow" customModuleProvider="target">
             <connections>
                 <outlet property="collectionView" destination="2Ud-RC-71x" id="NX2-rj-uok"/>
-                <outlet property="countLabel" destination="Aas-mC-Vcb" id="BJd-YS-cHw"/>
                 <outlet property="view" destination="GiI-00-Etf" id="7fj-WL-YbJ"/>
             </connections>
         </customObject>
@@ -19,13 +18,13 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
                 <scrollView autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jG1-2X-yCP">
-                    <rect key="frame" x="0.0" y="20" width="500" height="480"/>
+                    <rect key="frame" x="0.0" y="0.0" width="500" height="500"/>
                     <clipView key="contentView" id="oEG-tT-hIM">
-                        <rect key="frame" x="1" y="1" width="498" height="478"/>
+                        <rect key="frame" x="1" y="1" width="498" height="498"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView selectable="YES" id="2Ud-RC-71x">
-                                <rect key="frame" x="0.0" y="0.0" width="498" height="478"/>
+                                <rect key="frame" x="0.0" y="0.0" width="498" height="498"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <animations/>
                                 <collectionViewFlowLayout key="collectionViewLayout" id="s7h-k0-I2h">
@@ -52,25 +51,10 @@
                         <animations/>
                     </scroller>
                 </scrollView>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Aas-mC-Vcb">
-                    <rect key="frame" x="0.0" y="0.0" width="504" height="20"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="20" id="zGN-U4-jq5"/>
-                    </constraints>
-                    <animations/>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" id="FFG-0k-MQo">
-                        <font key="font" metaFont="system"/>
-                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                    </textFieldCell>
-                </textField>
             </subviews>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="jG1-2X-yCP" secondAttribute="trailing" id="0jU-4Y-vBj"/>
-                <constraint firstItem="Aas-mC-Vcb" firstAttribute="top" secondItem="jG1-2X-yCP" secondAttribute="bottom" id="MPe-8C-2Rq"/>
-                <constraint firstAttribute="bottom" secondItem="jG1-2X-yCP" secondAttribute="bottom" constant="20" id="Wb4-ht-ezk"/>
-                <constraint firstItem="Aas-mC-Vcb" firstAttribute="leading" secondItem="GiI-00-Etf" secondAttribute="leading" constant="2" id="b55-el-6FV"/>
-                <constraint firstAttribute="trailing" secondItem="Aas-mC-Vcb" secondAttribute="trailing" constant="-2" id="f9E-0r-tYS"/>
+                <constraint firstAttribute="bottom" secondItem="jG1-2X-yCP" secondAttribute="bottom" id="Wb4-ht-ezk"/>
                 <constraint firstItem="jG1-2X-yCP" firstAttribute="top" secondItem="GiI-00-Etf" secondAttribute="top" id="lZi-bX-z5r"/>
                 <constraint firstItem="jG1-2X-yCP" firstAttribute="leading" secondItem="GiI-00-Etf" secondAttribute="leading" id="xg7-W5-StF"/>
             </constraints>
