@@ -9,27 +9,90 @@
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <view id="wdw-Ny-UHV">
-            <rect key="frame" x="0.0" y="0.0" width="498" height="22"/>
+            <rect key="frame" x="0.0" y="0.0" width="388" height="86"/>
             <autoresizingMask key="autoresizingMask"/>
             <subviews>
                 <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="eUn-X8-FeL">
-                    <rect key="frame" x="0.0" y="0.0" width="500" height="22"/>
+                    <rect key="frame" x="55" y="44" width="278" height="24"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="500" id="xiR-FT-HgU"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="24" id="J8q-vy-vzf"/>
                     </constraints>
                     <animations/>
-                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" drawsBackground="YES" id="8cU-Ri-xAf">
-                        <font key="font" metaFont="system"/>
+                    <textFieldCell key="cell" truncatesLastVisibleLine="YES" selectable="YES" refusesFirstResponder="YES" allowsUndo="NO" sendsActionOnEndEditing="YES" state="on" alignment="left" drawsBackground="YES" allowsEditingTextAttributes="YES" id="8cU-Ri-xAf">
+                        <font key="font" size="13" name="SourceSansPro-Regular"/>
                         <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </textFieldCell>
                 </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="f0y-PG-GoK">
+                    <rect key="frame" x="53" y="0.0" width="45" height="28"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="41" id="Ne7-mW-h23"/>
+                        <constraint firstAttribute="height" constant="28" id="qaf-Lc-g9m"/>
+                    </constraints>
+                    <animations/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="12:23PM" id="HuL-HD-sRW">
+                        <font key="font" size="12" name="SourceSansPro-Regular"/>
+                        <color key="textColor" white="0.0" alpha="0.5" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="tu1-hD-gSH">
+                    <rect key="frame" x="109" y="0.0" width="205" height="28"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="201" id="19w-pp-FVr"/>
+                        <constraint firstAttribute="height" constant="28" id="xW9-Ao-a7E"/>
+                    </constraints>
+                    <animations/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Safari • wikipedia.com" id="0bq-TM-gLp">
+                        <font key="font" size="12" name="SourceSansPro-Regular"/>
+                        <color key="textColor" white="0.0" alpha="0.5" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <box verticalHuggingPriority="750" fixedFrame="YES" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="epy-jM-Mf6">
+                    <rect key="frame" x="0.0" y="-24" width="388" height="4"/>
+                    <animations/>
+                    <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                    <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <font key="titleFont" metaFont="system"/>
+                </box>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="c3F-c4-aVd">
+                    <rect key="frame" x="53" y="30" width="282" height="19"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="19" id="3Va-C3-mAO"/>
+                    </constraints>
+                    <animations/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="39 paragraphs" id="3Sz-hJ-wOi">
+                        <font key="font" size="12" name="SourceSansPro-Regular"/>
+                        <color key="textColor" white="0.0" alpha="0.5" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yJ0-p5-QHb">
+                    <rect key="frame" x="314" y="7" width="19" height="19"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="19" id="PPg-fY-4Jk"/>
+                        <constraint firstAttribute="width" constant="19" id="apM-hk-U5o"/>
+                    </constraints>
+                    <animations/>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="wikipedia" id="UZM-46-1DW"/>
+                </imageView>
             </subviews>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="eUn-X8-FeL" secondAttribute="bottom" id="QkF-OC-P1a"/>
-                <constraint firstItem="eUn-X8-FeL" firstAttribute="top" secondItem="wdw-Ny-UHV" secondAttribute="top" id="WaG-1S-g6f"/>
-                <constraint firstItem="eUn-X8-FeL" firstAttribute="leading" secondItem="wdw-Ny-UHV" secondAttribute="leading" id="lyp-Xq-ZG7"/>
-                <constraint firstAttribute="trailing" secondItem="eUn-X8-FeL" secondAttribute="trailing" constant="-2" id="uF5-Kz-8VI"/>
+                <constraint firstItem="tu1-hD-gSH" firstAttribute="top" secondItem="c3F-c4-aVd" secondAttribute="bottom" constant="2" id="1Lc-7m-JJA"/>
+                <constraint firstItem="yJ0-p5-QHb" firstAttribute="centerY" secondItem="tu1-hD-gSH" secondAttribute="centerY" constant="-2.5" id="6a7-MC-Gtc"/>
+                <constraint firstItem="f0y-PG-GoK" firstAttribute="top" secondItem="c3F-c4-aVd" secondAttribute="bottom" constant="2" id="A4d-0f-jYS"/>
+                <constraint firstItem="yJ0-p5-QHb" firstAttribute="trailing" secondItem="c3F-c4-aVd" secondAttribute="trailing" id="HD2-Xu-FBX"/>
+                <constraint firstAttribute="trailing" secondItem="eUn-X8-FeL" secondAttribute="trailing" constant="55" id="IiQ-xj-ZTD"/>
+                <constraint firstItem="tu1-hD-gSH" firstAttribute="leading" secondItem="f0y-PG-GoK" secondAttribute="trailing" constant="15" id="J7a-Si-gel"/>
+                <constraint firstItem="c3F-c4-aVd" firstAttribute="top" secondItem="eUn-X8-FeL" secondAttribute="bottom" constant="-5" id="SVy-GR-Wny"/>
+                <constraint firstItem="eUn-X8-FeL" firstAttribute="top" secondItem="wdw-Ny-UHV" secondAttribute="top" constant="18" id="dVD-P3-4Ud"/>
+                <constraint firstItem="f0y-PG-GoK" firstAttribute="leading" secondItem="c3F-c4-aVd" secondAttribute="leading" id="kCF-2F-anc"/>
+                <constraint firstItem="c3F-c4-aVd" firstAttribute="width" secondItem="eUn-X8-FeL" secondAttribute="width" id="qin-Gk-7d7"/>
+                <constraint firstAttribute="bottom" secondItem="eUn-X8-FeL" secondAttribute="bottom" constant="44" id="wc4-8J-lxO"/>
+                <constraint firstItem="eUn-X8-FeL" firstAttribute="leading" secondItem="wdw-Ny-UHV" secondAttribute="leading" constant="55" id="z0T-bk-D48"/>
+                <constraint firstItem="c3F-c4-aVd" firstAttribute="centerX" secondItem="eUn-X8-FeL" secondAttribute="centerX" id="zdE-dy-bS5"/>
             </constraints>
             <animations/>
             <point key="canvasLocation" x="415" y="284"/>
@@ -41,4 +104,7 @@
             </connections>
         </collectionViewItem>
     </objects>
+    <resources>
+        <image name="wikipedia" width="19" height="19"/>
+    </resources>
 </document>

@@ -8,29 +8,30 @@
         <customObject id="-2" userLabel="File's Owner" customClass="PasteboardViewController" customModule="PasteFlow" customModuleProvider="target">
             <connections>
                 <outlet property="collectionView" destination="2Ud-RC-71x" id="NX2-rj-uok"/>
+                <outlet property="countLabel" destination="Aas-mC-Vcb" id="9BM-Kd-s8w"/>
                 <outlet property="view" destination="GiI-00-Etf" id="7fj-WL-YbJ"/>
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <view id="GiI-00-Etf">
-            <rect key="frame" x="0.0" y="0.0" width="500" height="500"/>
+            <rect key="frame" x="0.0" y="0.0" width="388" height="512"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
-                <scrollView autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jG1-2X-yCP">
-                    <rect key="frame" x="0.0" y="0.0" width="500" height="500"/>
-                    <clipView key="contentView" id="oEG-tT-hIM">
-                        <rect key="frame" x="1" y="1" width="498" height="498"/>
+                <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jG1-2X-yCP">
+                    <rect key="frame" x="0.0" y="20" width="388" height="492"/>
+                    <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="oEG-tT-hIM">
+                        <rect key="frame" x="0.0" y="0.0" width="388" height="492"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView selectable="YES" id="2Ud-RC-71x">
-                                <rect key="frame" x="0.0" y="0.0" width="498" height="498"/>
+                                <rect key="frame" x="0.0" y="0.0" width="388" height="492"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <animations/>
                                 <collectionViewFlowLayout key="collectionViewLayout" id="s7h-k0-I2h">
-                                    <size key="itemSize" width="500" height="50"/>
+                                    <size key="itemSize" width="388" height="50"/>
                                 </collectionViewFlowLayout>
-                                <color key="primaryBackgroundColor" red="0.90588235289999997" green="0.90588235289999997" blue="0.90588235289999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="primaryBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="-2" id="8f2-f9-R7H"/>
                                     <outlet property="delegate" destination="-2" id="1ek-n6-qnX"/>
@@ -38,7 +39,12 @@
                             </collectionView>
                         </subviews>
                         <animations/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </clipView>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="388" id="EJf-b5-VKD"/>
+                        <constraint firstAttribute="height" constant="492" id="LtD-Jd-too"/>
+                    </constraints>
                     <animations/>
                     <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="ggZ-Lb-Dzf">
                         <rect key="frame" x="1" y="144" width="233" height="15"/>
@@ -51,12 +57,25 @@
                         <animations/>
                     </scroller>
                 </scrollView>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Aas-mC-Vcb">
+                    <rect key="frame" x="0.0" y="0.0" width="388" height="22"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="384" id="J2L-Ac-8Nx"/>
+                        <constraint firstAttribute="height" constant="22" id="Tbl-0C-8QZ"/>
+                    </constraints>
+                    <animations/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" id="FFG-0k-MQo">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
             </subviews>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="jG1-2X-yCP" secondAttribute="trailing" id="0jU-4Y-vBj"/>
-                <constraint firstAttribute="bottom" secondItem="jG1-2X-yCP" secondAttribute="bottom" id="Wb4-ht-ezk"/>
-                <constraint firstItem="jG1-2X-yCP" firstAttribute="top" secondItem="GiI-00-Etf" secondAttribute="top" id="lZi-bX-z5r"/>
-                <constraint firstItem="jG1-2X-yCP" firstAttribute="leading" secondItem="GiI-00-Etf" secondAttribute="leading" id="xg7-W5-StF"/>
+                <constraint firstAttribute="bottom" secondItem="Aas-mC-Vcb" secondAttribute="bottom" id="P70-9g-MxL"/>
+                <constraint firstItem="Aas-mC-Vcb" firstAttribute="centerX" secondItem="2Ud-RC-71x" secondAttribute="centerX" id="cnA-k9-vLb"/>
+                <constraint firstItem="jG1-2X-yCP" firstAttribute="top" secondItem="GiI-00-Etf" secondAttribute="top" id="gA8-0Y-f6O"/>
+                <constraint firstItem="jG1-2X-yCP" firstAttribute="leading" secondItem="GiI-00-Etf" secondAttribute="leading" id="qBC-E2-ha2"/>
             </constraints>
             <animations/>
         </view>

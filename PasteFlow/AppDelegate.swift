@@ -6,20 +6,20 @@
 //  Copyright © 2015 Agnes Vasarhelyi. All rights reserved.
 //
 
-import Cocoa
+import AppKit
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
     
     let statusItem = NSStatusBar.systemStatusBar().statusItemWithLength(-2)
     let popover = NSPopover()
+    var popoverTransiencyMonitor: AnyObject?
 
     func applicationDidFinishLaunching(aNotification: NSNotification) {
-        if let button = statusItem.button {
-            button.image = NSImage(named: "NSPathTemplate")
-            button.action = Selector("togglePopover:")
-        }
-        
+        statusItem.button!.image = NSImage(named: "NSPathTemplate")
+        statusItem.button!.action = Selector("togglePopover:")
+
+        popover.behavior = .Semitransient
         popover.contentViewController = PasteboardViewController(nibName: "PasteboardViewController", bundle: nil)
     }
 
@@ -29,12 +29,34 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     func togglePopover(sender: AnyObject?) {
         if popover.shown {
-            popover.performClose(sender)
+            closePopover(sender)
         } else {
-            if let button = statusItem.button {
-                popover.showRelativeToRect(button.bounds, ofView: button, preferredEdge: .MinY)
-            }
+            openPopover(sender)
         }
     }
+    
+    func openPopover(sender: AnyObject?) {
+        popover.showRelativeToRect(statusItem.button!.bounds, ofView: statusItem.button!, preferredEdge: .MinY)
+        
+        guard popoverTransiencyMonitor == nil else {
+            return
+        }
+        
+        popoverTransiencyMonitor = NSEvent.addGlobalMonitorForEventsMatchingMask([.RightMouseDownMask, .LeftMouseDownMask]) {_ in
+            self.closePopover(sender)
+        }
+    }
+    
+    func closePopover(sender: AnyObject?) {
+        popover.performClose(sender)
+        
+        guard let monitor = popoverTransiencyMonitor else {
+            return
+        }
+        
+        NSEvent.removeMonitor(monitor)
+        popoverTransiencyMonitor = nil
+    }
+    
 }
 
