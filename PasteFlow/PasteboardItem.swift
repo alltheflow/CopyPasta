@@ -13,7 +13,14 @@ func ==(lhs: PasteboardItem, rhs: PasteboardItem) -> Bool {
         if lhs.kind == .Text {
             return lhs.content as! String == rhs.content as! String
         } else if lhs.kind == .Image {
-            return lhs.content as! NSImage == rhs.content as! NSImage
+            let lhsi = lhs.content as! NSImage
+            let rhsi = rhs.content as! NSImage
+            
+            if let lhsiTiff = lhsi.TIFFRepresentation,
+                let rhsiTiff = rhsi.TIFFRepresentation {
+                    return lhsiTiff.isEqualToData(rhsiTiff);
+            }
+            return false
         } else {
             return lhs.content as! NSURL == rhs.content as! NSURL
         }
