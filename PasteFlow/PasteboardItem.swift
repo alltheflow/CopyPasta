@@ -9,34 +9,20 @@
 import Cocoa
 
 func ==(lhs: PasteboardItem, rhs: PasteboardItem) -> Bool {
-    if lhs.kind == rhs.kind {
-        if lhs.kind == .Text {
-            return lhs.content as! String == rhs.content as! String
-        } else if lhs.kind == .Image {
-            let lhsi = lhs.content as! NSImage
-            let rhsi = rhs.content as! NSImage
-            
-            if let lhsiTiff = lhsi.TIFFRepresentation,
-                let rhsiTiff = rhsi.TIFFRepresentation {
-                    return lhsiTiff.isEqualToData(rhsiTiff);
-            }
-            return false
-        } else {
-            return lhs.content as! NSURL == rhs.content as! NSURL
-        }
+    switch (lhs, rhs) {
+    case (.Text(let str1), .Text(let str2)): return str1 == str2
+    case (.Image(let img1), .Image(let img2)): return img1 == img2
+    case (.URL(let str1), .URL(let str2)): return str1 == str2
+    default: return false
     }
-    return false
 }
 
 func !=(lhs: PasteboardItem, rhs: PasteboardItem) -> Bool {
     return !(lhs == rhs)
 }
 
-struct PasteboardItem {
-    enum Kind {
-        case Text, URL, Image
-    }
-    
-    let content: AnyObject
-    let kind: Kind
+enum PasteboardItem {
+    case Text(String)
+    case URL(NSURL)
+    case Image(NSImage)
 }

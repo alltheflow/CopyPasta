@@ -9,13 +9,13 @@
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <view id="wdw-Ny-UHV">
-            <rect key="frame" x="0.0" y="0.0" width="388" height="110"/>
+            <rect key="frame" x="0.0" y="0.0" width="388" height="86"/>
             <autoresizingMask key="autoresizingMask"/>
             <subviews>
                 <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="eUn-X8-FeL">
-                    <rect key="frame" x="55" y="44" width="278" height="48"/>
+                    <rect key="frame" x="55" y="44" width="278" height="24"/>
                     <constraints>
-                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="48" id="J8q-vy-vzf"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="24" id="J8q-vy-vzf"/>
                     </constraints>
                     <animations/>
                     <textFieldCell key="cell" truncatesLastVisibleLine="YES" selectable="YES" refusesFirstResponder="YES" allowsUndo="NO" sendsActionOnEndEditing="YES" state="on" alignment="left" drawsBackground="YES" allowsEditingTextAttributes="YES" id="8cU-Ri-xAf">
@@ -51,7 +51,7 @@
                     </textFieldCell>
                 </textField>
                 <box verticalHuggingPriority="750" fixedFrame="YES" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="epy-jM-Mf6">
-                    <rect key="frame" x="0.0" y="0.0" width="388" height="5"/>
+                    <rect key="frame" x="0.0" y="-24" width="388" height="4"/>
                     <animations/>
                     <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                     <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>

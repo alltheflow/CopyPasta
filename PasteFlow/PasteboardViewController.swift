@@ -48,15 +48,18 @@ class PasteboardViewController: NSViewController, NSCollectionViewDataSource, NS
 
     func collectionView(collectionView: NSCollectionView, itemForRepresentedObjectAtIndexPath indexPath: NSIndexPath) -> NSCollectionViewItem {
         var cell = NSCollectionViewItem()
-        let content = pasteViewModel.itemAtIndex(indexPath.item).content
-
-        if let item = content as? String {
+        let item = pasteViewModel.itemAtIndex(indexPath.item)
+        
+        switch (item) {
+        case .Text(let string):
             cell = collectionView.makeItemWithIdentifier(textItemCellID, forIndexPath: indexPath)
-            cell.textField!.stringValue = item
-        } else if let item = content as? NSImage {
+            cell.textField!.stringValue = string
+        case .Image(let image):
             cell = collectionView.makeItemWithIdentifier(imageItemCellID, forIndexPath: indexPath)
-            cell.imageView!.image = item
+            cell.imageView!.image = image
+        default: break
         }
+        
         return cell
     }
     
@@ -74,11 +77,16 @@ class PasteboardViewController: NSViewController, NSCollectionViewDataSource, NS
     // MARK: Helper functions
     
     func sizeForItem(item: PasteboardItem) -> NSSize {
-        var height:CGFloat = 110.0
-        if item.kind == .Image {
-            height = item.content.size.height > 200.0 ? 200.0 : item.content.size.height
+        let w = collectionView.frame.size.width
+        switch (item) {
+        case .Text( _):
+            return NSSize(width: w, height: 110.0)
+        case .Image(let image):
+            let h = image.size.height > 200.0 ? 200.0 : image.size.height
+            return NSSize(width: w, height: h)
+        default: break
         }
-        return NSSize(width: collectionView.frame.size.width, height: height)
+        return NSSize(width: w, height: 50.0)
     }
-    
+
 }

@@ -40,24 +40,34 @@ class PasteboardService {
 
     func addItemToPasteboard(item: PasteboardItem) {
         pasteboard.clearContents()
-        pasteboard.writeObjects([item.content as! NSPasteboardWriting])
+        switch item {
+        case .Text(let string):
+            pasteboard.writeObjects([string as NSPasteboardWriting])
+        case .Image(let image):
+            pasteboard.writeObjects([image as NSPasteboardWriting])
+        case .URL(let url):
+            pasteboard.writeObjects([url as NSPasteboardWriting])
+
+        }
         pollPasteboardItems()
     }
 
     // MARK: private methods
 
     private func pasteboardItem(item: AnyObject?) -> PasteboardItem? {
-        let kind:PasteboardItem.Kind
-        
-        if item is NSString {
-            kind = .Text
-        } else if item is NSImage {
-            kind = .Image
-        } else {
-            kind = .URL
+        if let string = item as? String {
+            return .Text(string)
         }
         
-        return PasteboardItem(content: item!, kind: kind)
+        if let image = item as? NSImage {
+            return .Image(image)
+        }
+        
+        if let url = item as? NSURL {
+            return .URL(url)
+        }
+        
+        fatalError("unsupported types")
     }
 
 }
