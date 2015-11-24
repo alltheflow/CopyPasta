@@ -10,24 +10,29 @@ import Foundation
 import VinceRP
 
 class PasteViewModel {
-    let timer: NSTimer
     let pasteboardService = PasteboardService()
-    let pasteboardItems: Hub<[PasteboardItem]>
 
     init() {
-        // no KVO unfortunately
-        pasteboardItems = pasteboardService.pasteboardItems
-        timer = NSTimer.scheduledTimerWithTimeInterval(1, target: pasteboardService, selector: "pollPasteboardItems", userInfo: nil, repeats: true)
+        timer(1.0) {
+            self.pasteboardService.pollPasteboardItems()
+        }
+    }
+    
+    var pasteboardItems: Hub<[PasteboardItem]> {
+        return pasteboardService.pasteboardItems
+    }
+
+    var items: [PasteboardItem] {
+        return pasteboardItems*
     }
 
     func selectItemAtIndex(index: Int) {
-        let items = pasteboardItems*
-        let item = items[index]
+        let item = self.items[index]
         pasteboardService.addItemToPasteboard(item)
     }
 
     func itemAtIndex(index: Int) -> PasteboardItem {
-        let items = pasteboardService.pasteboardItems*
-        return items[index]
+        return self.items[index]
     }
+    
 }

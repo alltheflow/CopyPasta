@@ -7,7 +7,6 @@
 //
 
 import Cocoa
-import VinceRP
 
 class PasteboardViewController: NSViewController, NSCollectionViewDataSource, NSCollectionViewDelegate, NSCollectionViewDelegateFlowLayout {
 
@@ -38,7 +37,7 @@ class PasteboardViewController: NSViewController, NSCollectionViewDataSource, NS
     // MARK: NSCollectionViewDataSource
 
     func collectionView(collectionView: NSCollectionView, numberOfItemsInSection section: Int) -> Int {
-        return pasteViewModel.pasteboardItems*.count
+        return pasteViewModel.items.count
     }
 
     func collectionView(collectionView: NSCollectionView, itemForRepresentedObjectAtIndexPath indexPath: NSIndexPath) -> NSCollectionViewItem {
@@ -56,7 +55,7 @@ class PasteboardViewController: NSViewController, NSCollectionViewDataSource, NS
     }
     
     func collectionView(collectionView: NSCollectionView, layout collectionViewLayout: NSCollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> NSSize {
-        let items = pasteViewModel.pasteboardItems*
+        let items = pasteViewModel.items
         return sizeForItem(items[indexPath.item])
     }
 
