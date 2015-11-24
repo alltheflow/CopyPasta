@@ -10,7 +10,7 @@ import Foundation
 import VinceRP
 
 class PasteViewModel {
-    var timer: NSTimer
+    let timer: NSTimer
     let pasteboardService = PasteboardService()
     let pasteboardItems: Hub<[PasteboardItem]>
 
