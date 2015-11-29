@@ -10,9 +10,10 @@
 		026771D21BE924D5002B79F4 /* PasteboardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026771D11BE924D5002B79F4 /* PasteboardService.swift */; };
 		02801C321C035333000817CE /* PasteboardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02801C311C035333000817CE /* PasteboardItem.swift */; };
 		02801C351C0354F7000817CE /* PasteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02801C341C0354F7000817CE /* PasteViewModel.swift */; };
+		02AF8C7B1C0B030400BEDE2E /* PasteboardViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02AF8C7A1C0B030400BEDE2E /* PasteboardViewModelTests.swift */; };
+		02AF8C7C1C0B09DA00BEDE2E /* vincerp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02C8B3901BE3FAE800203CF2 /* vincerp.framework */; };
 		02C488881BE21A0F004FD281 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C488871BE21A0F004FD281 /* AppDelegate.swift */; };
 		02C4888A1BE21A0F004FD281 /* PasteboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C488891BE21A0F004FD281 /* PasteboardViewController.swift */; };
-		02C4889A1BE21A0F004FD281 /* PasteFlowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C488991BE21A0F004FD281 /* PasteFlowTests.swift */; };
 		02C8B3911BE3FAE800203CF2 /* vincerp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02C8B3901BE3FAE800203CF2 /* vincerp.framework */; };
 		02C8B3951BE3FAFB00203CF2 /* vincerp.framework in Copy Carthage frameworks */ = {isa = PBXBuildFile; fileRef = 02C8B3901BE3FAE800203CF2 /* vincerp.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		02CD87441BEFA3D700C149AF /* TextItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02CD87431BEFA3D700C149AF /* TextItemCell.xib */; };
@@ -52,12 +53,12 @@
 		026771D11BE924D5002B79F4 /* PasteboardService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasteboardService.swift; sourceTree = "<group>"; };
 		02801C311C035333000817CE /* PasteboardItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasteboardItem.swift; sourceTree = "<group>"; };
 		02801C341C0354F7000817CE /* PasteViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasteViewModel.swift; sourceTree = "<group>"; };
+		02AF8C7A1C0B030400BEDE2E /* PasteboardViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasteboardViewModelTests.swift; sourceTree = "<group>"; };
 		02C488841BE21A0F004FD281 /* PasteFlow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PasteFlow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02C488871BE21A0F004FD281 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		02C488891BE21A0F004FD281 /* PasteboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasteboardViewController.swift; sourceTree = "<group>"; };
 		02C488901BE21A0F004FD281 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		02C488951BE21A0F004FD281 /* PasteFlowTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PasteFlowTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		02C488991BE21A0F004FD281 /* PasteFlowTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasteFlowTests.swift; sourceTree = "<group>"; };
 		02C4889B1BE21A0F004FD281 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		02C8B3901BE3FAE800203CF2 /* vincerp.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = vincerp.framework; path = Carthage/Build/Mac/vincerp.framework; sourceTree = "<group>"; };
 		02CD87431BEFA3D700C149AF /* TextItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextItemCell.xib; sourceTree = "<group>"; };
@@ -82,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02AF8C7C1C0B09DA00BEDE2E /* vincerp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,8 +141,8 @@
 		02C488981BE21A0F004FD281 /* PasteFlowTests */ = {
 			isa = PBXGroup;
 			children = (
-				02C488991BE21A0F004FD281 /* PasteFlowTests.swift */,
 				02C4889B1BE21A0F004FD281 /* Info.plist */,
+				02AF8C7A1C0B030400BEDE2E /* PasteboardViewModelTests.swift */,
 			);
 			path = PasteFlowTests;
 			sourceTree = "<group>";
@@ -302,7 +304,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				02C4889A1BE21A0F004FD281 /* PasteFlowTests.swift in Sources */,
+				02AF8C7B1C0B030400BEDE2E /* PasteboardViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,11 +436,17 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_IDENTITY = "";
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = PasteFlowTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vasarhelyia.PasteFlowTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PasteFlow.app/Contents/MacOS/PasteFlow";
 			};
 			name = Debug;
@@ -448,7 +456,12 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_IDENTITY = "";
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = PasteFlowTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vasarhelyia.PasteFlowTests;

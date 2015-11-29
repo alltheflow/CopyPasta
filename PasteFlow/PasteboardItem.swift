@@ -17,8 +17,8 @@ extension NSImage {
         
         guard let lhsiTiff = self.TIFFRepresentation,
             let rhsiTiff = otherImage.TIFFRepresentation  else {
-            return false
-        }
+                return false
+            }
         
         return lhsiTiff.isEqualToData(rhsiTiff)
     }

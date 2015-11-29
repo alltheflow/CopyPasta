@@ -15,6 +15,11 @@ trigger_map:
 workflows:
   test:
     steps:
+    - git::https://github.com/vasarhelyia/steps-carthage.git@feature/platform-as-input:
+        title: Carthage
+        inputs:
+        - platform: "iOS,Mac"
+        - verbose_output: "true"
     - script:
         inputs:
         - content: |-
