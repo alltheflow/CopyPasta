@@ -5,11 +5,16 @@
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9060"/>
     </dependencies>
     <objects>
-        <customObject id="-2" userLabel="File's Owner" customClass="ImageItemCell"/>
+        <customObject id="-2" userLabel="File's Owner">
+            <connections>
+                <outlet property="dateLabel" destination="FlZ-mJ-FST" id="cQf-Li-nY5"/>
+            </connections>
+        </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
-        <collectionViewItem id="oJD-e0-5hs">
+        <collectionViewItem id="oJD-e0-5hs" customClass="PasteboardCollectionViewItem" customModule="PasteFlow" customModuleProvider="target">
             <connections>
+                <outlet property="dateLabel" destination="FlZ-mJ-FST" id="JSr-Sc-EkP"/>
                 <outlet property="imageView" destination="msc-JY-zSx" id="eWB-FZ-iTj"/>
                 <outlet property="view" destination="7Iv-xv-FhU" id="mSG-sT-Xld"/>
             </connections>
@@ -18,60 +23,16 @@
             <rect key="frame" x="0.0" y="0.0" width="388" height="229"/>
             <autoresizingMask key="autoresizingMask"/>
             <subviews>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="R1N-rw-7JE">
-                    <rect key="frame" x="53" y="0.0" width="45" height="28"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="28" id="gdS-zW-5F5"/>
-                        <constraint firstAttribute="width" constant="41" id="vCm-sJ-jsk"/>
-                    </constraints>
-                    <animations/>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="12:23PM" id="yMx-Sv-jL2">
-                        <font key="font" size="12" name="SourceSansPro-Regular"/>
-                        <color key="textColor" white="0.0" alpha="0.5" colorSpace="calibratedWhite"/>
-                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                    </textFieldCell>
-                </textField>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="46S-TA-8rl">
-                    <rect key="frame" x="109" y="0.0" width="205" height="28"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="28" id="1xE-m2-bq4"/>
-                        <constraint firstAttribute="width" constant="201" id="SBJ-FH-dEz"/>
-                    </constraints>
-                    <animations/>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Safari • wikipedia.com" id="YBn-98-eMM">
-                        <font key="font" size="12" name="SourceSansPro-Regular"/>
-                        <color key="textColor" white="0.0" alpha="0.5" colorSpace="calibratedWhite"/>
-                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                    </textFieldCell>
-                </textField>
-                <box horizontalHuggingPriority="1000" verticalHuggingPriority="750" fixedFrame="YES" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="eLK-fP-ldB">
+                <box horizontalHuggingPriority="1000" verticalHuggingPriority="750" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="eLK-fP-ldB">
                     <rect key="frame" x="0.0" y="0.0" width="388" height="4"/>
+                    <constraints>
+                        <constraint firstAttribute="height" id="TTz-Ji-xYl"/>
+                    </constraints>
                     <animations/>
                     <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                     <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <font key="titleFont" metaFont="system"/>
                 </box>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="MbI-pv-R8y">
-                    <rect key="frame" x="53" y="30" width="282" height="19"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="19" id="EgV-RD-iUa"/>
-                    </constraints>
-                    <animations/>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="39 paragraphs" id="mot-kb-UMs">
-                        <font key="font" size="12" name="SourceSansPro-Regular"/>
-                        <color key="textColor" white="0.0" alpha="0.5" colorSpace="calibratedWhite"/>
-                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                    </textFieldCell>
-                </textField>
-                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sNQ-yl-ia3">
-                    <rect key="frame" x="314" y="7" width="19" height="19"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="19" id="Akk-dK-MlQ"/>
-                        <constraint firstAttribute="height" constant="19" id="rxo-1i-7Jr"/>
-                    </constraints>
-                    <animations/>
-                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="wikipedia" id="6jv-Ph-aDd"/>
-                </imageView>
                 <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="msc-JY-zSx">
                     <rect key="frame" x="55" y="50" width="278" height="159"/>
                     <constraints>
@@ -81,25 +42,31 @@
                     <animations/>
                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="7X0-7f-rdX"/>
                 </imageView>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="FlZ-mJ-FST" userLabel="Date">
+                    <rect key="frame" x="18" y="12" width="60" height="16"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="16" id="Fbs-Nb-KWw"/>
+                        <constraint firstAttribute="width" constant="56" id="qqm-KY-PRz"/>
+                    </constraints>
+                    <animations/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" id="mdv-UX-RiY">
+                        <font key="font" metaFont="cellTitle"/>
+                        <color key="textColor" white="0.0" alpha="0.5" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
             </subviews>
             <constraints>
                 <constraint firstItem="msc-JY-zSx" firstAttribute="centerX" secondItem="7Iv-xv-FhU" secondAttribute="centerX" id="1DA-kz-W18"/>
-                <constraint firstItem="46S-TA-8rl" firstAttribute="leading" secondItem="R1N-rw-7JE" secondAttribute="trailing" constant="15" id="1Xf-sf-dYB"/>
-                <constraint firstItem="MbI-pv-R8y" firstAttribute="width" secondItem="msc-JY-zSx" secondAttribute="width" id="8xX-4H-Udu"/>
-                <constraint firstItem="R1N-rw-7JE" firstAttribute="top" secondItem="MbI-pv-R8y" secondAttribute="bottom" constant="2" id="NBL-kH-rmD"/>
-                <constraint firstItem="46S-TA-8rl" firstAttribute="top" secondItem="MbI-pv-R8y" secondAttribute="bottom" constant="2" id="NBr-9P-sli"/>
-                <constraint firstItem="MbI-pv-R8y" firstAttribute="top" secondItem="msc-JY-zSx" secondAttribute="bottom" constant="1" id="R8b-gA-Y55"/>
-                <constraint firstItem="MbI-pv-R8y" firstAttribute="centerX" secondItem="msc-JY-zSx" secondAttribute="centerX" id="djZ-Eh-E72"/>
-                <constraint firstItem="sNQ-yl-ia3" firstAttribute="top" secondItem="MbI-pv-R8y" secondAttribute="bottom" constant="4" id="hD3-1w-hqf"/>
-                <constraint firstItem="sNQ-yl-ia3" firstAttribute="leading" secondItem="46S-TA-8rl" secondAttribute="trailing" constant="2" id="pnn-9m-lgX"/>
+                <constraint firstItem="FlZ-mJ-FST" firstAttribute="top" secondItem="msc-JY-zSx" secondAttribute="bottom" constant="22" id="63I-Od-ZmD"/>
+                <constraint firstItem="FlZ-mJ-FST" firstAttribute="leading" secondItem="7Iv-xv-FhU" secondAttribute="leading" constant="20" symbolic="YES" id="Fic-0V-jAg"/>
+                <constraint firstItem="eLK-fP-ldB" firstAttribute="centerX" secondItem="msc-JY-zSx" secondAttribute="centerX" id="N9a-wS-ZwD"/>
+                <constraint firstItem="eLK-fP-ldB" firstAttribute="top" secondItem="FlZ-mJ-FST" secondAttribute="bottom" constant="10" id="bM5-nk-KNa"/>
                 <constraint firstItem="msc-JY-zSx" firstAttribute="top" secondItem="7Iv-xv-FhU" secondAttribute="top" constant="20" id="rgk-Nx-ZZl"/>
-                <constraint firstItem="R1N-rw-7JE" firstAttribute="leading" secondItem="MbI-pv-R8y" secondAttribute="leading" id="sNg-98-mfJ"/>
+                <constraint firstItem="eLK-fP-ldB" firstAttribute="leading" secondItem="7Iv-xv-FhU" secondAttribute="leading" id="u0q-G2-lnT"/>
             </constraints>
             <animations/>
             <point key="canvasLocation" x="415" y="283.5"/>
         </view>
     </objects>
-    <resources>
-        <image name="wikipedia" width="19" height="19"/>
-    </resources>
 </document>

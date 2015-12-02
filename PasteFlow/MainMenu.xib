@@ -663,5 +663,97 @@
                 </menuItem>
             </items>
         </menu>
+        <view id="uhD-GK-XNU">
+            <rect key="frame" x="0.0" y="0.0" width="388" height="86"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="327-S4-gdh">
+                    <rect key="frame" x="55" y="44" width="278" height="24"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="24" id="5SU-p9-XQf"/>
+                    </constraints>
+                    <animations/>
+                    <textFieldCell key="cell" truncatesLastVisibleLine="YES" selectable="YES" refusesFirstResponder="YES" allowsUndo="NO" sendsActionOnEndEditing="YES" state="on" alignment="left" drawsBackground="YES" allowsEditingTextAttributes="YES" id="yf0-H4-Yma">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="55y-Gk-rvl">
+                    <rect key="frame" x="53" y="0.0" width="45" height="28"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="28" id="5UU-0l-5e9"/>
+                        <constraint firstAttribute="width" constant="41" id="Xws-1u-vA9"/>
+                    </constraints>
+                    <animations/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="12:23PM" id="inK-uO-K2B">
+                        <font key="font" metaFont="cellTitle"/>
+                        <color key="textColor" white="0.0" alpha="0.5" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="opl-GH-PN8">
+                    <rect key="frame" x="109" y="0.0" width="205" height="28"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="28" id="8KS-3M-uHI"/>
+                        <constraint firstAttribute="width" constant="201" id="nf7-0V-4cV"/>
+                    </constraints>
+                    <animations/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Safari • wikipedia.com" id="fUk-M8-QGZ">
+                        <font key="font" metaFont="cellTitle"/>
+                        <color key="textColor" white="0.0" alpha="0.5" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <box verticalHuggingPriority="750" fixedFrame="YES" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="vHj-ad-AQg">
+                    <rect key="frame" x="0.0" y="-24" width="388" height="4"/>
+                    <animations/>
+                    <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                    <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <font key="titleFont" metaFont="system"/>
+                </box>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="aRe-Gp-g7w">
+                    <rect key="frame" x="53" y="30" width="282" height="19"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="19" id="oSh-8c-78a"/>
+                    </constraints>
+                    <animations/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="39 paragraphs" id="QJ6-hr-mpG">
+                        <font key="font" metaFont="cellTitle"/>
+                        <color key="textColor" white="0.0" alpha="0.5" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Frb-85-G1I">
+                    <rect key="frame" x="314" y="7" width="19" height="19"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="19" id="TIO-0M-Uah"/>
+                        <constraint firstAttribute="height" constant="19" id="fS3-ER-yGg"/>
+                    </constraints>
+                    <animations/>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="wikipedia" id="L9D-1j-5rc"/>
+                </imageView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="Frb-85-G1I" firstAttribute="centerY" secondItem="opl-GH-PN8" secondAttribute="centerY" constant="-2.5" id="0cP-yJ-BNW"/>
+                <constraint firstItem="opl-GH-PN8" firstAttribute="leading" secondItem="55y-Gk-rvl" secondAttribute="trailing" constant="15" id="95h-5A-CYM"/>
+                <constraint firstItem="55y-Gk-rvl" firstAttribute="leading" secondItem="aRe-Gp-g7w" secondAttribute="leading" id="ApW-CI-bvM"/>
+                <constraint firstAttribute="trailing" secondItem="327-S4-gdh" secondAttribute="trailing" constant="55" id="B5g-6w-tfW"/>
+                <constraint firstItem="opl-GH-PN8" firstAttribute="top" secondItem="aRe-Gp-g7w" secondAttribute="bottom" constant="2" id="KEz-Vq-bO4"/>
+                <constraint firstItem="aRe-Gp-g7w" firstAttribute="width" secondItem="327-S4-gdh" secondAttribute="width" id="Ly1-AR-N6b"/>
+                <constraint firstItem="aRe-Gp-g7w" firstAttribute="centerX" secondItem="327-S4-gdh" secondAttribute="centerX" id="OCF-Ai-dxj"/>
+                <constraint firstItem="55y-Gk-rvl" firstAttribute="top" secondItem="aRe-Gp-g7w" secondAttribute="bottom" constant="2" id="PpI-c1-Td6"/>
+                <constraint firstItem="Frb-85-G1I" firstAttribute="trailing" secondItem="aRe-Gp-g7w" secondAttribute="trailing" id="Qo0-34-bd1"/>
+                <constraint firstItem="aRe-Gp-g7w" firstAttribute="top" secondItem="327-S4-gdh" secondAttribute="bottom" constant="-5" id="Utg-np-sFr"/>
+                <constraint firstItem="327-S4-gdh" firstAttribute="leading" secondItem="uhD-GK-XNU" secondAttribute="leading" constant="55" id="cg8-s9-Vsg"/>
+                <constraint firstAttribute="bottom" secondItem="327-S4-gdh" secondAttribute="bottom" constant="44" id="j8f-Qw-YT0"/>
+                <constraint firstItem="327-S4-gdh" firstAttribute="top" secondItem="uhD-GK-XNU" secondAttribute="top" constant="18" id="qaL-Yx-6aI"/>
+            </constraints>
+            <animations/>
+            <point key="canvasLocation" x="749" y="458"/>
+        </view>
     </objects>
+    <resources>
+        <image name="wikipedia" width="19" height="19"/>
+    </resources>
 </document>

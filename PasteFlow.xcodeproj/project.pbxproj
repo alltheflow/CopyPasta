@@ -10,8 +10,8 @@
 		026771D21BE924D5002B79F4 /* PasteboardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026771D11BE924D5002B79F4 /* PasteboardService.swift */; };
 		02801C321C035333000817CE /* PasteboardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02801C311C035333000817CE /* PasteboardItem.swift */; };
 		02801C351C0354F7000817CE /* PasteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02801C341C0354F7000817CE /* PasteViewModel.swift */; };
-		02AF8C7B1C0B030400BEDE2E /* PasteboardViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02AF8C7A1C0B030400BEDE2E /* PasteboardViewModelTests.swift */; };
 		02AF8C7C1C0B09DA00BEDE2E /* vincerp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02C8B3901BE3FAE800203CF2 /* vincerp.framework */; };
+		02AF8C7E1C0DF1EC00BEDE2E /* PasteboardCollectionViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02AF8C7D1C0DF1EC00BEDE2E /* PasteboardCollectionViewItem.swift */; };
 		02C488881BE21A0F004FD281 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C488871BE21A0F004FD281 /* AppDelegate.swift */; };
 		02C4888A1BE21A0F004FD281 /* PasteboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C488891BE21A0F004FD281 /* PasteboardViewController.swift */; };
 		02C8B3911BE3FAE800203CF2 /* vincerp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02C8B3901BE3FAE800203CF2 /* vincerp.framework */; };
@@ -53,7 +53,7 @@
 		026771D11BE924D5002B79F4 /* PasteboardService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasteboardService.swift; sourceTree = "<group>"; };
 		02801C311C035333000817CE /* PasteboardItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasteboardItem.swift; sourceTree = "<group>"; };
 		02801C341C0354F7000817CE /* PasteViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasteViewModel.swift; sourceTree = "<group>"; };
-		02AF8C7A1C0B030400BEDE2E /* PasteboardViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasteboardViewModelTests.swift; sourceTree = "<group>"; };
+		02AF8C7D1C0DF1EC00BEDE2E /* PasteboardCollectionViewItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasteboardCollectionViewItem.swift; sourceTree = "<group>"; };
 		02C488841BE21A0F004FD281 /* PasteFlow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PasteFlow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02C488871BE21A0F004FD281 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		02C488891BE21A0F004FD281 /* PasteboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasteboardViewController.swift; sourceTree = "<group>"; };
@@ -142,7 +142,6 @@
 			isa = PBXGroup;
 			children = (
 				02C4889B1BE21A0F004FD281 /* Info.plist */,
-				02AF8C7A1C0B030400BEDE2E /* PasteboardViewModelTests.swift */,
 			);
 			path = PasteFlowTests;
 			sourceTree = "<group>";
@@ -169,6 +168,7 @@
 			children = (
 				791F31431C049C8B004AA9E2 /* Popover */,
 				02C488891BE21A0F004FD281 /* PasteboardViewController.swift */,
+				02AF8C7D1C0DF1EC00BEDE2E /* PasteboardCollectionViewItem.swift */,
 				02CD87471BEFDA6700C149AF /* ImageItemCell.xib */,
 				02F54B691C00BFD400093553 /* MainMenu.xib */,
 				02F54B6B1C00C24E00093553 /* PasteboardViewController.xib */,
@@ -290,6 +290,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02AF8C7E1C0DF1EC00BEDE2E /* PasteboardCollectionViewItem.swift in Sources */,
 				791F31451C049CC6004AA9E2 /* PastePopoverRootView.swift in Sources */,
 				791F31471C049D0C004AA9E2 /* PastePopoverBackgroundView.swift in Sources */,
 				02C4888A1BE21A0F004FD281 /* PasteboardViewController.swift in Sources */,
@@ -304,7 +305,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				02AF8C7B1C0B030400BEDE2E /* PasteboardViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,8 +435,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_IDENTITY = "";
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -455,8 +455,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_IDENTITY = "";
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

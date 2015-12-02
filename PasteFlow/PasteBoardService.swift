@@ -51,6 +51,10 @@ class PasteboardService {
         }
         pollPasteboardItems()
     }
+    
+    func items() -> Hub<[PasteboardItem]> {
+        return self.pasteboardItems
+    }
 
     // MARK: private methods
 

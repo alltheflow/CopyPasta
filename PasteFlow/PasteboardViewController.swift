@@ -24,10 +24,6 @@ class PasteboardViewController: NSViewController, NSCollectionViewDataSource, NS
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-//    override func loadView() {
-//        self.view = PastePopoverRootView()
-//    }
 
     override func awakeFromNib() {
         let textItemNib = NSNib(nibNamed: textItemCellID, bundle: nil)
@@ -36,37 +32,38 @@ class PasteboardViewController: NSViewController, NSCollectionViewDataSource, NS
         collectionView.registerNib(textItemNib, forItemWithIdentifier: textItemCellID)
         collectionView.registerNib(imageItemNib, forItemWithIdentifier: imageItemCellID)
 
-        countLabel.reactiveText = pasteViewModel.pasteboardItems.dispatchOnMainQueue().map {
+        countLabel.reactiveText = pasteViewModel.pasteboardItems().dispatchOnMainQueue().map {
             "\($0.count) items"
         }
-        pasteViewModel.pasteboardItems.dispatchOnMainQueue().onChange { _ in self.collectionView.reloadData() }
+        pasteViewModel.pasteboardItems().dispatchOnMainQueue().onChange { _ in self.collectionView.reloadData() }
     }
 
     // MARK: NSCollectionViewDataSource
 
     func collectionView(collectionView: NSCollectionView, numberOfItemsInSection section: Int) -> Int {
-        return pasteViewModel.items.count
+        return pasteViewModel.items().count
     }
 
     func collectionView(collectionView: NSCollectionView, itemForRepresentedObjectAtIndexPath indexPath: NSIndexPath) -> NSCollectionViewItem {
-        var cell = NSCollectionViewItem()
+        var cell = PasteboardCollectionViewItem()
         let item = pasteViewModel.itemAtIndex(indexPath.item)
-        
+       
         switch (item) {
-        case .Text(let string):
-            cell = collectionView.makeItemWithIdentifier(textItemCellID, forIndexPath: indexPath)
-            cell.textField!.stringValue = string
-        case .Image(let image):
-            cell = collectionView.makeItemWithIdentifier(imageItemCellID, forIndexPath: indexPath)
-            cell.imageView!.image = image
-        default: break
+            case .Text(let string):
+                cell = collectionView.makeItemWithIdentifier(textItemCellID, forIndexPath: indexPath) as! PasteboardCollectionViewItem
+                cell.textField!.stringValue = string
+            case .Image(let image):
+                cell = collectionView.makeItemWithIdentifier(imageItemCellID, forIndexPath: indexPath) as! PasteboardCollectionViewItem
+                cell.imageView!.image = image
+            default: break
         }
-        
+
+        cell.dateLabel.stringValue = self.timestamp()
         return cell
     }
     
     func collectionView(collectionView: NSCollectionView, layout collectionViewLayout: NSCollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> NSSize {
-        let items = pasteViewModel.items
+        let items = pasteViewModel.items()
         return sizeForItem(items[indexPath.item])
     }
 
@@ -78,14 +75,21 @@ class PasteboardViewController: NSViewController, NSCollectionViewDataSource, NS
     
     // MARK: Helper functions
     
+    func timestamp() -> String {
+        let date = NSDate()
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "hh:mm"
+        return dateFormatter.stringFromDate(date)
+    }
+    
     func sizeForItem(item: PasteboardItem) -> NSSize {
         let w = collectionView.frame.size.width
         switch (item) {
-        case .Text(_):
-            return NSSize(width: w, height: 110.0)
-        case .Image(_):
-            return NSSize(width: w, height: 229.0)
-        default: break
+            case .Text(_):
+                return NSSize(width: w, height: 110.0)
+            case .Image(_):
+                return NSSize(width: w, height: 229.0)
+            default: break
         }
         return NSSize(width: w, height: 50.0)
     }
