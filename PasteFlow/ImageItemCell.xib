@@ -5,11 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9060"/>
     </dependencies>
     <objects>
-        <customObject id="-2" userLabel="File's Owner">
-            <connections>
-                <outlet property="dateLabel" destination="FlZ-mJ-FST" id="cQf-Li-nY5"/>
-            </connections>
-        </customObject>
+        <customObject id="-2" userLabel="File's Owner"/>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <collectionViewItem id="oJD-e0-5hs" customClass="PasteboardCollectionViewItem" customModule="PasteFlow" customModuleProvider="target">
@@ -36,8 +32,8 @@
                 <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="msc-JY-zSx">
                     <rect key="frame" x="55" y="50" width="278" height="159"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="159" id="1ya-qk-S8d"/>
-                        <constraint firstAttribute="width" constant="278" id="y6W-Ny-vcO"/>
+                        <constraint firstAttribute="width" constant="278" id="6hk-9t-sBS"/>
+                        <constraint firstAttribute="height" priority="500" constant="159" id="lsU-vb-IVV"/>
                     </constraints>
                     <animations/>
                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="7X0-7f-rdX"/>
@@ -46,7 +42,6 @@
                     <rect key="frame" x="18" y="12" width="60" height="16"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="16" id="Fbs-Nb-KWw"/>
-                        <constraint firstAttribute="width" constant="56" id="qqm-KY-PRz"/>
                     </constraints>
                     <animations/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" id="mdv-UX-RiY">
@@ -57,12 +52,13 @@
                 </textField>
             </subviews>
             <constraints>
-                <constraint firstItem="msc-JY-zSx" firstAttribute="centerX" secondItem="7Iv-xv-FhU" secondAttribute="centerX" id="1DA-kz-W18"/>
-                <constraint firstItem="FlZ-mJ-FST" firstAttribute="top" secondItem="msc-JY-zSx" secondAttribute="bottom" constant="22" id="63I-Od-ZmD"/>
+                <constraint firstAttribute="trailing" secondItem="FlZ-mJ-FST" secondAttribute="trailing" priority="500" constant="312" id="9in-3F-8Yr"/>
                 <constraint firstItem="FlZ-mJ-FST" firstAttribute="leading" secondItem="7Iv-xv-FhU" secondAttribute="leading" constant="20" symbolic="YES" id="Fic-0V-jAg"/>
-                <constraint firstItem="eLK-fP-ldB" firstAttribute="centerX" secondItem="msc-JY-zSx" secondAttribute="centerX" id="N9a-wS-ZwD"/>
+                <constraint firstItem="msc-JY-zSx" firstAttribute="top" secondItem="7Iv-xv-FhU" secondAttribute="top" constant="20" id="R4c-Y5-f3A"/>
+                <constraint firstItem="FlZ-mJ-FST" firstAttribute="top" secondItem="msc-JY-zSx" secondAttribute="bottom" constant="22" id="UPn-E5-b24"/>
+                <constraint firstAttribute="trailing" secondItem="eLK-fP-ldB" secondAttribute="trailing" id="acF-Qa-qXo"/>
                 <constraint firstItem="eLK-fP-ldB" firstAttribute="top" secondItem="FlZ-mJ-FST" secondAttribute="bottom" constant="10" id="bM5-nk-KNa"/>
-                <constraint firstItem="msc-JY-zSx" firstAttribute="top" secondItem="7Iv-xv-FhU" secondAttribute="top" constant="20" id="rgk-Nx-ZZl"/>
+                <constraint firstItem="eLK-fP-ldB" firstAttribute="centerX" secondItem="msc-JY-zSx" secondAttribute="centerX" id="luQ-aP-ksg"/>
                 <constraint firstItem="eLK-fP-ldB" firstAttribute="leading" secondItem="7Iv-xv-FhU" secondAttribute="leading" id="u0q-G2-lnT"/>
             </constraints>
             <animations/>

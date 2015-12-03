@@ -41,12 +41,12 @@ class PasteboardService {
     func addItemToPasteboard(item: PasteboardItem) {
         pasteboard.clearContents()
         switch item {
-        case .Text(let string):
-            pasteboard.writeObjects([string as NSPasteboardWriting])
-        case .Image(let image):
-            pasteboard.writeObjects([image as NSPasteboardWriting])
-        case .URL(let url):
-            pasteboard.writeObjects([url as NSPasteboardWriting])
+            case .Text(let string):
+                pasteboard.writeObjects([string as NSPasteboardWriting])
+            case .Image(let image):
+                pasteboard.writeObjects([image as NSPasteboardWriting])
+            case .URL(let url):
+                pasteboard.writeObjects([url as NSPasteboardWriting])
 
         }
         pollPasteboardItems()

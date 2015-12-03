@@ -78,20 +78,26 @@ class PasteboardViewController: NSViewController, NSCollectionViewDataSource, NS
     func timestamp() -> String {
         let date = NSDate()
         let dateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = "hh:mm"
+        dateFormatter.dateFormat = "MMM. dd HH:mm"
         return dateFormatter.stringFromDate(date)
+    }
+    
+    func heightForItem(item: PasteboardItem) -> CGFloat {
+        let h = collectionView.frame.size.height
+        switch (item) {
+            case .Text(let text):
+                let font = NSFont.systemFontOfSize(13)
+                let textHeight = text.heightWithConstrainedWidth(348.0, font:font)
+                return textHeight < 150 ? textHeight + 70 : 150
+            case .Image(let image):
+                return h > 159.0 ? 159.0 : image.size.height
+            default: return h
+        }
     }
     
     func sizeForItem(item: PasteboardItem) -> NSSize {
         let w = collectionView.frame.size.width
-        switch (item) {
-            case .Text(_):
-                return NSSize(width: w, height: 110.0)
-            case .Image(_):
-                return NSSize(width: w, height: 229.0)
-            default: break
-        }
-        return NSSize(width: w, height: 50.0)
+        return NSSize(width: w, height: heightForItem(item))
     }
 
 }
