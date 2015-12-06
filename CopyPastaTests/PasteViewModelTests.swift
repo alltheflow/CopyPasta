@@ -11,7 +11,7 @@ import XCTest
 
 class MockedPasteViewModel: PasteViewModel {
     override func items() -> [PasteboardItem] {
-        return [.Text("paste"), .Text("flow")]
+        return [.Text("copy"), .Text("pasta")]
     }
 }
 
@@ -21,7 +21,7 @@ class PasteViewModelTests: XCTestCase {
     
     func testSelectItemAtIndex() {
         pasteViewModel.selectItemAtIndex(0)
-        XCTAssertTrue(pasteViewModel.items()[0] == .Text("paste"), "it should poll new items")
+        XCTAssertTrue(pasteViewModel.items()[0] == .Text("copy"), "it should readd existing items")
     }
 
 }

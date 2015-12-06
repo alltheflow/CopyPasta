@@ -12,9 +12,9 @@ import XCTest
 class PasteboardItemTests: XCTestCase {
 
     func testTextItem() {
-        let textItem = PasteboardItem.Text("text")
-        XCTAssert(textItem == .Text("text"), "should handle equal operator")
-        XCTAssert(textItem != .Text("other text"), "should handle not equal operator")
+        let textItem = PasteboardItem.Text("copy")
+        XCTAssert(textItem == .Text("copy"), "should handle equal operator")
+        XCTAssert(textItem != .Text("copy pasta"), "should handle not equal operator")
     }
 
     func testImageItem() {

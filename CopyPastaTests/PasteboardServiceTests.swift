@@ -17,18 +17,18 @@ class PasteboardServiceTests: XCTestCase {
     override func setUp() {
         super.setUp()
         pasteboardService.pasteboard.clearContents()
-        pasteboardService.pasteboardItems <- [.Text("paste")]
+        pasteboardService.pasteboardItems <- [.Text("copy")]
     }
 
     func addItemToPasteboard() {
-        pasteboardService.addItemToPasteboard(.Text("flow"))
-        XCTAssertTrue(pasteboardService.pasteboardItems.value()[0] == .Text("flow"), "it should add new items")
+        pasteboardService.addItemToPasteboard(.Text("pasta"))
+        XCTAssertTrue(pasteboardService.pasteboardItems.value()[0] == .Text("pasta"), "it should add new items")
     }
 
     func testpollPasteboardItems() {
-        pasteboardService.pasteboard.writeObjects(["flow" as NSPasteboardWriting])
+        pasteboardService.pasteboard.writeObjects(["pasta" as NSPasteboardWriting])
         pasteboardService.pollPasteboardItems()
 
-        XCTAssertTrue(pasteboardService.pasteboardItems.value()[0] == .Text("flow"), "it should poll new items")
+        XCTAssertTrue(pasteboardService.pasteboardItems.value()[0] == .Text("pasta"), "it should poll new items")
     }
 }
