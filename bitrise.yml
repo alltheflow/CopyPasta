@@ -5,7 +5,7 @@ app:
   envs:
   - BITRISE_PROJECT_PATH: "./PasteFlow.xcodeproj"
   - BITRISE_SCHEME: PasteFlow
-  - BUILD_TOOL: xctool
+  - BUILD_TOOL: xcodebuild
 
 trigger_map:
 - pattern: "*"
@@ -15,26 +15,15 @@ trigger_map:
 workflows:
   test:
     steps:
-    - git::https://github.com/vasarhelyia/steps-carthage.git@feature/platform-as-input:
+    - git::https://github.com/vasarhelyia/steps-carthage.git@1.0.4:
         title: Carthage
         inputs:
-        - platform: "iOS,Mac"
-        - verbose_output: "true"
-    - script:
+        - carthage_command: update
+        - no_use_binaries: 'true'
+        - verbose_output: 'true'
+        - platform: Mac
+    - git::https://github.com/vasarhelyia/steps-xcode-test-mac.git@1.0.2:
+        title: Xcode Test Mac
         inputs:
-        - content: |-
-            #!/bin/bash
-            set -e
-            set -x
-            # NOTE: xctool doesn't support running Xcode 7 UI tests!!
-            #  link: https://github.com/facebook/xctool/issues/534
-            xcodebuild -project $BITRISE_PROJECT_PATH -scheme $BITRISE_SCHEME test
-  archive:
-    steps:
-    - script:
-        inputs:
-        - content: |-
-            #!/bin/bash
-            set -e
-            set -x
-            $BUILD_TOOL -project $BITRISE_PROJECT_PATH -scheme $BITRISE_SCHEME archive
+        - generate_code_coverage_files: "no"
+        - is_clean_build: "yes"
