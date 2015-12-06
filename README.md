@@ -1,6 +1,6 @@
 ![CopyPasta](https://cloud.githubusercontent.com/assets/1460573/11615156/7a3b6454-9c59-11e5-95fa-0780af681f2e.png)
 
-Just a basic pasteboard feed. Check out the blogpost about its purpose on [alltheflow](https://blog.alltheflow.com/lightweight-reactive-coding-with-swift-and-vincerp/).
+Just a basic pasteboard feed. Check out the blogpost about its purpose on [alltheflow blog](https://blog.alltheflow.com/lightweight-reactive-coding-with-swift-and-vincerp/).
 
 ## Install with [Carthage](https://github.com/Carthage/Carthage)
 
