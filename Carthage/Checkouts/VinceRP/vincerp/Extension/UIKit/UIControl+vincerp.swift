@@ -9,14 +9,14 @@ public extension UIControl {
     
     public var reactiveEnabled: Hub<Bool> {
         get {
-            return reactiveEmitter(name: "enabled", initValue: self.enabled)
+            return reactiveSource(name: "enabled", initValue: self.enabled)
         }
         
         set {
             newValue.onChange {
                 self.enabled = self.mapReactiveEnabled($0)
                 self.reactiveEnabledDidChange()
-            }
+            }.dispatchOnMainQueue()
         }
     }
     
