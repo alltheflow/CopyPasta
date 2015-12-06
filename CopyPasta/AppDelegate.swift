@@ -16,7 +16,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var popoverTransiencyMonitor: AnyObject?
 
     func applicationDidFinishLaunching(aNotification: NSNotification) {
-        statusItem.button!.image = NSImage(named: "NSPathTemplate")
+        statusItem.button!.image = NSImage(named: "pasta_icon")
         statusItem.button!.action = Selector("togglePopover:")
 
         popover.behavior = .Semitransient
