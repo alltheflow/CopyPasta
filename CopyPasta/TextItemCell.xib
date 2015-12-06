@@ -56,7 +56,7 @@
             <animations/>
             <point key="canvasLocation" x="492" y="284"/>
         </view>
-        <collectionViewItem id="Psh-Is-H1T" customClass="PasteboardCollectionViewItem" customModule="PasteFlow" customModuleProvider="target">
+        <collectionViewItem id="Psh-Is-H1T" customClass="PasteboardCollectionViewItem" customModule="CopyPasta" customModuleProvider="target">
             <connections>
                 <outlet property="dateLabel" destination="f0y-PG-GoK" id="VMc-3X-IPd"/>
                 <outlet property="textField" destination="eUn-X8-FeL" id="bJj-fY-4rm"/>

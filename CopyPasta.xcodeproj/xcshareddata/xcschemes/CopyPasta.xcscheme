@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "02C488831BE21A0F004FD281"
-               BuildableName = "PasteFlow.app"
-               BlueprintName = "PasteFlow"
-               ReferencedContainer = "container:PasteFlow.xcodeproj">
+               BuildableName = "CopyPasta.app"
+               BlueprintName = "CopyPasta"
+               ReferencedContainer = "container:CopyPasta.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "02C488941BE21A0F004FD281"
-               BuildableName = "PasteFlowTests.xctest"
-               BlueprintName = "PasteFlowTests"
-               ReferencedContainer = "container:PasteFlow.xcodeproj">
+               BuildableName = "CopyPastaTests.xctest"
+               BlueprintName = "CopyPastaTests"
+               ReferencedContainer = "container:CopyPasta.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "02C4889F1BE21A0F004FD281"
-               BuildableName = "PasteFlowUITests.xctest"
-               BlueprintName = "PasteFlowUITests"
-               ReferencedContainer = "container:PasteFlow.xcodeproj">
+               BuildableName = "CopyPastaUITests.xctest"
+               BlueprintName = "CopyPastaUITests"
+               ReferencedContainer = "container:CopyPasta.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -53,9 +53,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "02C488831BE21A0F004FD281"
-            BuildableName = "PasteFlow.app"
-            BlueprintName = "PasteFlow"
-            ReferencedContainer = "container:PasteFlow.xcodeproj">
+            BuildableName = "CopyPasta.app"
+            BlueprintName = "CopyPasta"
+            ReferencedContainer = "container:CopyPasta.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -76,9 +76,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "02C488831BE21A0F004FD281"
-            BuildableName = "PasteFlow.app"
-            BlueprintName = "PasteFlow"
-            ReferencedContainer = "container:PasteFlow.xcodeproj">
+            BuildableName = "CopyPasta.app"
+            BlueprintName = "CopyPasta"
+            ReferencedContainer = "container:CopyPasta.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -95,9 +95,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "02C488831BE21A0F004FD281"
-            BuildableName = "PasteFlow.app"
-            BlueprintName = "PasteFlow"
-            ReferencedContainer = "container:PasteFlow.xcodeproj">
+            BuildableName = "CopyPasta.app"
+            BlueprintName = "CopyPasta"
+            ReferencedContainer = "container:CopyPasta.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

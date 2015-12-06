@@ -1,13 +1,13 @@
 //
 //  PasteboardItemTests.swift
-//  PasteFlow
+//  CopyPasta
 //
 //  Created by Agnes Vasarhelyi on 06/12/15.
 //  Copyright © 2015 Agnes Vasarhelyi. All rights reserved.
 //
 
 import XCTest
-@testable import PasteFlow
+@testable import CopyPasta
 
 class PasteboardItemTests: XCTestCase {
 

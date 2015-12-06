@@ -34,7 +34,7 @@
 			containerPortal = 02C4887C1BE21A0F004FD281 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 02C488831BE21A0F004FD281;
-			remoteInfo = PasteFlow;
+			remoteInfo = CopyPasta;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -57,11 +57,11 @@
 		02801C311C035333000817CE /* PasteboardItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasteboardItem.swift; sourceTree = "<group>"; };
 		02801C341C0354F7000817CE /* PasteViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasteViewModel.swift; sourceTree = "<group>"; };
 		02AF8C7D1C0DF1EC00BEDE2E /* PasteboardCollectionViewItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasteboardCollectionViewItem.swift; sourceTree = "<group>"; };
-		02C488841BE21A0F004FD281 /* PasteFlow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PasteFlow.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		02C488841BE21A0F004FD281 /* CopyPasta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CopyPasta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02C488871BE21A0F004FD281 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		02C488891BE21A0F004FD281 /* PasteboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasteboardViewController.swift; sourceTree = "<group>"; };
 		02C488901BE21A0F004FD281 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		02C488951BE21A0F004FD281 /* PasteFlowTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PasteFlowTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		02C488951BE21A0F004FD281 /* CopyPastaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CopyPastaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		02C4889B1BE21A0F004FD281 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		02C8B3901BE3FAE800203CF2 /* vincerp.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = vincerp.framework; path = Carthage/Build/Mac/vincerp.framework; sourceTree = "<group>"; };
 		02CD87431BEFA3D700C149AF /* TextItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextItemCell.xib; sourceTree = "<group>"; };
@@ -115,8 +115,8 @@
 		02C4887B1BE21A0F004FD281 = {
 			isa = PBXGroup;
 			children = (
-				02C488861BE21A0F004FD281 /* PasteFlow */,
-				02C488981BE21A0F004FD281 /* PasteFlowTests */,
+				02C488861BE21A0F004FD281 /* CopyPasta */,
+				02C488981BE21A0F004FD281 /* CopyPastaTests */,
 				02C8B38F1BE3FAD000203CF2 /* Frameworks */,
 				02C488851BE21A0F004FD281 /* Products */,
 			);
@@ -125,13 +125,13 @@
 		02C488851BE21A0F004FD281 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				02C488841BE21A0F004FD281 /* PasteFlow.app */,
-				02C488951BE21A0F004FD281 /* PasteFlowTests.xctest */,
+				02C488841BE21A0F004FD281 /* CopyPasta.app */,
+				02C488951BE21A0F004FD281 /* CopyPastaTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		02C488861BE21A0F004FD281 /* PasteFlow */ = {
+		02C488861BE21A0F004FD281 /* CopyPasta */ = {
 			isa = PBXGroup;
 			children = (
 				02801C331C0354E7000817CE /* ViewModel */,
@@ -141,10 +141,10 @@
 				02C488871BE21A0F004FD281 /* AppDelegate.swift */,
 				02CD87451BEFA98200C149AF /* Supporting Files */,
 			);
-			path = PasteFlow;
+			path = CopyPasta;
 			sourceTree = "<group>";
 		};
-		02C488981BE21A0F004FD281 /* PasteFlowTests */ = {
+		02C488981BE21A0F004FD281 /* CopyPastaTests */ = {
 			isa = PBXGroup;
 			children = (
 				02C4889B1BE21A0F004FD281 /* Info.plist */,
@@ -152,7 +152,7 @@
 				02F3508D1C14804A008A88DD /* PasteViewModelTests.swift */,
 				02F3508F1C148A40008A88DD /* PasteboardItemTests.swift */,
 			);
-			path = PasteFlowTests;
+			path = CopyPastaTests;
 			sourceTree = "<group>";
 		};
 		02C8B38F1BE3FAD000203CF2 /* Frameworks */ = {
@@ -198,9 +198,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		02C488831BE21A0F004FD281 /* PasteFlow */ = {
+		02C488831BE21A0F004FD281 /* CopyPasta */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 02C488A91BE21A0F004FD281 /* Build configuration list for PBXNativeTarget "PasteFlow" */;
+			buildConfigurationList = 02C488A91BE21A0F004FD281 /* Build configuration list for PBXNativeTarget "CopyPasta" */;
 			buildPhases = (
 				02C488801BE21A0F004FD281 /* Sources */,
 				02C488811BE21A0F004FD281 /* Frameworks */,
@@ -211,14 +211,14 @@
 			);
 			dependencies = (
 			);
-			name = PasteFlow;
-			productName = PasteFlow;
-			productReference = 02C488841BE21A0F004FD281 /* PasteFlow.app */;
+			name = CopyPasta;
+			productName = CopyPasta;
+			productReference = 02C488841BE21A0F004FD281 /* CopyPasta.app */;
 			productType = "com.apple.product-type.application";
 		};
-		02C488941BE21A0F004FD281 /* PasteFlowTests */ = {
+		02C488941BE21A0F004FD281 /* CopyPastaTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 02C488AC1BE21A0F004FD281 /* Build configuration list for PBXNativeTarget "PasteFlowTests" */;
+			buildConfigurationList = 02C488AC1BE21A0F004FD281 /* Build configuration list for PBXNativeTarget "CopyPastaTests" */;
 			buildPhases = (
 				02C488911BE21A0F004FD281 /* Sources */,
 				02C488921BE21A0F004FD281 /* Frameworks */,
@@ -229,9 +229,9 @@
 			dependencies = (
 				02C488971BE21A0F004FD281 /* PBXTargetDependency */,
 			);
-			name = PasteFlowTests;
-			productName = PasteFlowTests;
-			productReference = 02C488951BE21A0F004FD281 /* PasteFlowTests.xctest */;
+			name = CopyPastaTests;
+			productName = CopyPastaTests;
+			productReference = 02C488951BE21A0F004FD281 /* CopyPastaTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -253,7 +253,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 02C4887F1BE21A0F004FD281 /* Build configuration list for PBXProject "PasteFlow" */;
+			buildConfigurationList = 02C4887F1BE21A0F004FD281 /* Build configuration list for PBXProject "CopyPasta" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -266,8 +266,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				02C488831BE21A0F004FD281 /* PasteFlow */,
-				02C488941BE21A0F004FD281 /* PasteFlowTests */,
+				02C488831BE21A0F004FD281 /* CopyPasta */,
+				02C488941BE21A0F004FD281 /* CopyPastaTests */,
 			);
 		};
 /* End PBXProject section */
@@ -325,7 +325,7 @@
 /* Begin PBXTargetDependency section */
 		02C488971BE21A0F004FD281 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 02C488831BE21A0F004FD281 /* PasteFlow */;
+			target = 02C488831BE21A0F004FD281 /* CopyPasta */;
 			targetProxy = 02C488961BE21A0F004FD281 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -420,9 +420,9 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
-				INFOPLIST_FILE = PasteFlow/Info.plist;
+				INFOPLIST_FILE = CopyPasta/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.vasarhelyia.PasteFlow;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vasarhelyia.CopyPasta;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -436,9 +436,9 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
-				INFOPLIST_FILE = PasteFlow/Info.plist;
+				INFOPLIST_FILE = CopyPasta/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.vasarhelyia.PasteFlow;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vasarhelyia.CopyPasta;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -454,12 +454,12 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
-				INFOPLIST_FILE = PasteFlowTests/Info.plist;
+				INFOPLIST_FILE = CopyPastaTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.vasarhelyia.PasteFlowTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vasarhelyia.CopyPastaTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PasteFlow.app/Contents/MacOS/PasteFlow";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CopyPasta.app/Contents/MacOS/CopyPasta";
 			};
 			name = Debug;
 		};
@@ -474,18 +474,18 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
-				INFOPLIST_FILE = PasteFlowTests/Info.plist;
+				INFOPLIST_FILE = CopyPastaTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.vasarhelyia.PasteFlowTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vasarhelyia.CopyPastaTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PasteFlow.app/Contents/MacOS/PasteFlow";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CopyPasta.app/Contents/MacOS/CopyPasta";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		02C4887F1BE21A0F004FD281 /* Build configuration list for PBXProject "PasteFlow" */ = {
+		02C4887F1BE21A0F004FD281 /* Build configuration list for PBXProject "CopyPasta" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				02C488A71BE21A0F004FD281 /* Debug */,
@@ -494,7 +494,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		02C488A91BE21A0F004FD281 /* Build configuration list for PBXNativeTarget "PasteFlow" */ = {
+		02C488A91BE21A0F004FD281 /* Build configuration list for PBXNativeTarget "CopyPasta" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				02C488AA1BE21A0F004FD281 /* Debug */,
@@ -503,7 +503,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		02C488AC1BE21A0F004FD281 /* Build configuration list for PBXNativeTarget "PasteFlowTests" */ = {
+		02C488AC1BE21A0F004FD281 /* Build configuration list for PBXNativeTarget "CopyPastaTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				02C488AD1BE21A0F004FD281 /* Debug */,

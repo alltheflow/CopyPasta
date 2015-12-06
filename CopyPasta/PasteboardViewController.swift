@@ -1,6 +1,6 @@
 //
 //  PasteboardViewController.swift
-//  PasteFlow
+//  CopyPasta
 //
 //  Created by Agnes Vasarhelyi on 29/10/15.
 //  Copyright © 2015 Agnes Vasarhelyi. All rights reserved.

@@ -3,8 +3,8 @@ default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
 
 app:
   envs:
-  - BITRISE_PROJECT_PATH: "./PasteFlow.xcodeproj"
-  - BITRISE_SCHEME: PasteFlow
+  - BITRISE_PROJECT_PATH: "./CopyPasta.xcodeproj"
+  - BITRISE_SCHEME: CopyPasta
   - BUILD_TOOL: xcodebuild
 
 trigger_map:

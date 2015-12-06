@@ -1,6 +1,6 @@
 //
 //  PasteboardItem.swift
-//  PasteFlow
+//  CopyPasta
 //
 //  Created by Agnes Vasarhelyi on 23/11/15.
 //  Copyright © 2015 Agnes Vasarhelyi. All rights reserved.
