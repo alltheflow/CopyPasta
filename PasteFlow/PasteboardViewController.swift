@@ -48,6 +48,7 @@ class PasteboardViewController: NSViewController, NSCollectionViewDataSource, NS
             case .Text(let string):
                 cell = collectionView.makeItemWithIdentifier(textItemCellID, forIndexPath: indexPath) as! PasteboardCollectionViewItem
                 cell.textField!.stringValue = string
+                cell.textField?.toolTip = string
             case .Image(let image):
                 cell = collectionView.makeItemWithIdentifier(imageItemCellID, forIndexPath: indexPath) as! PasteboardCollectionViewItem
                 cell.imageView!.image = image
