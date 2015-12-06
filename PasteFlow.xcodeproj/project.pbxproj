@@ -20,6 +20,7 @@
 		02CD87481BEFDA6700C149AF /* ImageItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02CD87471BEFDA6700C149AF /* ImageItemCell.xib */; };
 		02F3508C1C145F2E008A88DD /* PasteboardServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F3508B1C145F2E008A88DD /* PasteboardServiceTests.swift */; };
 		02F3508E1C14804A008A88DD /* PasteViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F3508D1C14804A008A88DD /* PasteViewModelTests.swift */; };
+		02F350901C148A40008A88DD /* PasteboardItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F3508F1C148A40008A88DD /* PasteboardItemTests.swift */; };
 		02F54B6A1C00BFD400093553 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02F54B691C00BFD400093553 /* MainMenu.xib */; };
 		02F54B6C1C00C24E00093553 /* PasteboardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02F54B6B1C00C24E00093553 /* PasteboardViewController.xib */; };
 		02F54B701C00C6E100093553 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02F54B6F1C00C6E100093553 /* Assets.xcassets */; };
@@ -67,6 +68,7 @@
 		02CD87471BEFDA6700C149AF /* ImageItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageItemCell.xib; sourceTree = "<group>"; };
 		02F3508B1C145F2E008A88DD /* PasteboardServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasteboardServiceTests.swift; sourceTree = "<group>"; };
 		02F3508D1C14804A008A88DD /* PasteViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasteViewModelTests.swift; sourceTree = "<group>"; };
+		02F3508F1C148A40008A88DD /* PasteboardItemTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasteboardItemTests.swift; sourceTree = "<group>"; };
 		02F54B691C00BFD400093553 /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
 		02F54B6B1C00C24E00093553 /* PasteboardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PasteboardViewController.xib; sourceTree = "<group>"; };
 		02F54B6F1C00C6E100093553 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 				02C4889B1BE21A0F004FD281 /* Info.plist */,
 				02F3508B1C145F2E008A88DD /* PasteboardServiceTests.swift */,
 				02F3508D1C14804A008A88DD /* PasteViewModelTests.swift */,
+				02F3508F1C148A40008A88DD /* PasteboardItemTests.swift */,
 			);
 			path = PasteFlowTests;
 			sourceTree = "<group>";
@@ -313,6 +316,7 @@
 			files = (
 				02F3508E1C14804A008A88DD /* PasteViewModelTests.swift in Sources */,
 				02F3508C1C145F2E008A88DD /* PasteboardServiceTests.swift in Sources */,
+				02F350901C148A40008A88DD /* PasteboardItemTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

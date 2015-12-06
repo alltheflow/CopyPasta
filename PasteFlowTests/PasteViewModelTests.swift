@@ -7,7 +7,6 @@
 //
 
 import XCTest
-import VinceRP
 @testable import PasteFlow
 
 class MockedPasteViewModel: PasteViewModel {
