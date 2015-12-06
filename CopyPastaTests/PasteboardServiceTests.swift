@@ -31,4 +31,5 @@ class PasteboardServiceTests: XCTestCase {
 
         XCTAssertTrue(pasteboardService.pasteboardItems.value()[0] == .Text("pasta"), "it should poll new items")
     }
+
 }
