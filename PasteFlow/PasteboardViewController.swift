@@ -15,7 +15,6 @@ class PasteboardViewController: NSViewController, NSCollectionViewDataSource, NS
     let pasteViewModel = PasteViewModel()
     
     @IBOutlet weak var collectionView: NSCollectionView!
-    @IBOutlet weak var countLabel: NSTextField!
 
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)!
@@ -32,9 +31,6 @@ class PasteboardViewController: NSViewController, NSCollectionViewDataSource, NS
         collectionView.registerNib(textItemNib, forItemWithIdentifier: textItemCellID)
         collectionView.registerNib(imageItemNib, forItemWithIdentifier: imageItemCellID)
 
-        countLabel.reactiveText = pasteViewModel.pasteboardItems().dispatchOnMainQueue().map {
-            "\($0.count) items"
-        }
         pasteViewModel.pasteboardItems().dispatchOnMainQueue().onChange { _ in self.collectionView.reloadData() }
     }
 

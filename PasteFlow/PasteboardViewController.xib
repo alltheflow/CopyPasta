@@ -8,7 +8,6 @@
         <customObject id="-2" userLabel="File's Owner" customClass="PasteboardViewController" customModule="PasteFlow" customModuleProvider="target">
             <connections>
                 <outlet property="collectionView" destination="2Ud-RC-71x" id="NX2-rj-uok"/>
-                <outlet property="countLabel" destination="Aas-mC-Vcb" id="9BM-Kd-s8w"/>
                 <outlet property="view" destination="GiI-00-Etf" id="7fj-WL-YbJ"/>
             </connections>
         </customObject>
@@ -19,13 +18,13 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
                 <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jG1-2X-yCP">
-                    <rect key="frame" x="0.0" y="20" width="388" height="492"/>
+                    <rect key="frame" x="0.0" y="0.0" width="388" height="512"/>
                     <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="oEG-tT-hIM">
-                        <rect key="frame" x="0.0" y="0.0" width="388" height="492"/>
+                        <rect key="frame" x="0.0" y="0.0" width="388" height="512"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView selectable="YES" id="2Ud-RC-71x">
-                                <rect key="frame" x="0.0" y="0.0" width="388" height="492"/>
+                                <rect key="frame" x="0.0" y="0.0" width="388" height="512"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <animations/>
                                 <collectionViewFlowLayout key="collectionViewLayout" id="s7h-k0-I2h">
@@ -43,7 +42,7 @@
                     </clipView>
                     <constraints>
                         <constraint firstAttribute="width" constant="388" id="EJf-b5-VKD"/>
-                        <constraint firstAttribute="height" constant="492" id="LtD-Jd-too"/>
+                        <constraint firstAttribute="height" constant="512" id="LtD-Jd-too"/>
                     </constraints>
                     <animations/>
                     <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="ggZ-Lb-Dzf">
@@ -57,23 +56,8 @@
                         <animations/>
                     </scroller>
                 </scrollView>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Aas-mC-Vcb">
-                    <rect key="frame" x="0.0" y="0.0" width="388" height="22"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="384" id="J2L-Ac-8Nx"/>
-                        <constraint firstAttribute="height" constant="22" id="Tbl-0C-8QZ"/>
-                    </constraints>
-                    <animations/>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" id="FFG-0k-MQo">
-                        <font key="font" metaFont="system"/>
-                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                    </textFieldCell>
-                </textField>
             </subviews>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="Aas-mC-Vcb" secondAttribute="bottom" id="P70-9g-MxL"/>
-                <constraint firstItem="Aas-mC-Vcb" firstAttribute="centerX" secondItem="2Ud-RC-71x" secondAttribute="centerX" id="cnA-k9-vLb"/>
                 <constraint firstItem="jG1-2X-yCP" firstAttribute="top" secondItem="GiI-00-Etf" secondAttribute="top" id="gA8-0Y-f6O"/>
                 <constraint firstItem="jG1-2X-yCP" firstAttribute="leading" secondItem="GiI-00-Etf" secondAttribute="leading" id="qBC-E2-ha2"/>
             </constraints>
