@@ -7,3 +7,7 @@ Basic pasteboard feed. Blog post about it's purpose can be found on [alltheflow]
 ```
 carthage update --platform mac
 ```
+
+### Dependencies
+
+- [VinceRP](https://github.com/bvic23/VinceRP) 0.2.5
