@@ -18,7 +18,7 @@
 		02C8B3951BE3FAFB00203CF2 /* vincerp.framework in Copy Carthage frameworks */ = {isa = PBXBuildFile; fileRef = 02C8B3901BE3FAE800203CF2 /* vincerp.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		02CD87441BEFA3D700C149AF /* TextItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02CD87431BEFA3D700C149AF /* TextItemCell.xib */; };
 		02CD87481BEFDA6700C149AF /* ImageItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02CD87471BEFDA6700C149AF /* ImageItemCell.xib */; };
-		02EF68C41C1092B20061B690 /* PasteboardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02EF68C31C1092B20061B690 /* PasteboardTests.swift */; };
+		02F3508C1C145F2E008A88DD /* PasteboardServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F3508B1C145F2E008A88DD /* PasteboardServiceTests.swift */; };
 		02F54B6A1C00BFD400093553 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02F54B691C00BFD400093553 /* MainMenu.xib */; };
 		02F54B6C1C00C24E00093553 /* PasteboardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02F54B6B1C00C24E00093553 /* PasteboardViewController.xib */; };
 		02F54B701C00C6E100093553 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02F54B6F1C00C6E100093553 /* Assets.xcassets */; };
@@ -64,7 +64,7 @@
 		02C8B3901BE3FAE800203CF2 /* vincerp.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = vincerp.framework; path = Carthage/Build/Mac/vincerp.framework; sourceTree = "<group>"; };
 		02CD87431BEFA3D700C149AF /* TextItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextItemCell.xib; sourceTree = "<group>"; };
 		02CD87471BEFDA6700C149AF /* ImageItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageItemCell.xib; sourceTree = "<group>"; };
-		02EF68C31C1092B20061B690 /* PasteboardTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasteboardTests.swift; sourceTree = "<group>"; };
+		02F3508B1C145F2E008A88DD /* PasteboardServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasteboardServiceTests.swift; sourceTree = "<group>"; };
 		02F54B691C00BFD400093553 /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
 		02F54B6B1C00C24E00093553 /* PasteboardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PasteboardViewController.xib; sourceTree = "<group>"; };
 		02F54B6F1C00C6E100093553 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -144,7 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				02C4889B1BE21A0F004FD281 /* Info.plist */,
-				02EF68C31C1092B20061B690 /* PasteboardTests.swift */,
+				02F3508B1C145F2E008A88DD /* PasteboardServiceTests.swift */,
 			);
 			path = PasteFlowTests;
 			sourceTree = "<group>";
@@ -308,7 +308,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				02EF68C41C1092B20061B690 /* PasteboardTests.swift in Sources */,
+				02F3508C1C145F2E008A88DD /* PasteboardServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

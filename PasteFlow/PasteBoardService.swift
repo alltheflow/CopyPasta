@@ -18,11 +18,11 @@ class PasteboardService {
     // MARK: public methods
 
     @objc func pollPasteboardItems() {
-        
+
         if (changeCount* == pasteboard.changeCount) {
             return
         }
-        
+
         guard let items = pasteboard.readObjectsForClasses([NSString.self, NSImage.self, NSURL.self], options: nil)
             where items.count > 0 else {
             return
@@ -47,11 +47,10 @@ class PasteboardService {
                 pasteboard.writeObjects([image as NSPasteboardWriting])
             case .URL(let url):
                 pasteboard.writeObjects([url as NSPasteboardWriting])
-
         }
         pollPasteboardItems()
     }
-    
+
     func items() -> Hub<[PasteboardItem]> {
         return self.pasteboardItems
     }

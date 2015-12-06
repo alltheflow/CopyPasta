@@ -34,5 +34,5 @@ class PasteViewModel {
     func itemAtIndex(index: Int) -> PasteboardItem {
         return self.items()[index]
     }
-    
+
 }
