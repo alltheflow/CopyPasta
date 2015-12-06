@@ -11,3 +11,7 @@ carthage update --platform mac
 ### Dependencies
 
 - [VinceRP](https://github.com/bvic23/VinceRP) 0.2.5
+
+## App
+
+![CopyPasta in action](https://cloud.githubusercontent.com/assets/1460573/11615326/bad4be3a-9c5d-11e5-98ce-dac5c9fea45b.png)
