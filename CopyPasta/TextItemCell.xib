@@ -54,7 +54,7 @@
                 <constraint firstItem="eUn-X8-FeL" firstAttribute="leading" secondItem="wdw-Ny-UHV" secondAttribute="leading" constant="20" id="z0T-bk-D48"/>
             </constraints>
             <animations/>
-            <point key="canvasLocation" x="492" y="284"/>
+            <point key="canvasLocation" x="423" y="257"/>
         </view>
         <collectionViewItem id="Psh-Is-H1T" customClass="PasteboardCollectionViewItem" customModule="CopyPasta" customModuleProvider="target">
             <connections>

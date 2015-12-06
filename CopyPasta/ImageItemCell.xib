@@ -10,59 +10,55 @@
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <collectionViewItem id="oJD-e0-5hs" customClass="PasteboardCollectionViewItem" customModule="CopyPasta" customModuleProvider="target">
             <connections>
-                <outlet property="dateLabel" destination="FlZ-mJ-FST" id="JSr-Sc-EkP"/>
-                <outlet property="imageView" destination="msc-JY-zSx" id="eWB-FZ-iTj"/>
-                <outlet property="view" destination="7Iv-xv-FhU" id="mSG-sT-Xld"/>
+                <outlet property="dateLabel" destination="YxP-fp-ptv" id="Y8e-X6-HUY"/>
+                <outlet property="imageView" destination="4Dl-eW-3A9" id="kSU-Bk-EZz"/>
+                <outlet property="view" destination="MQN-iK-It3" id="vTH-zp-XUf"/>
             </connections>
         </collectionViewItem>
-        <view id="7Iv-xv-FhU">
-            <rect key="frame" x="0.0" y="0.0" width="388" height="229"/>
+        <view id="MQN-iK-It3">
+            <rect key="frame" x="0.0" y="0.0" width="388" height="204"/>
             <autoresizingMask key="autoresizingMask"/>
             <subviews>
-                <box horizontalHuggingPriority="1000" verticalHuggingPriority="750" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="eLK-fP-ldB">
-                    <rect key="frame" x="0.0" y="0.0" width="388" height="4"/>
-                    <constraints>
-                        <constraint firstAttribute="height" id="TTz-Ji-xYl"/>
-                    </constraints>
+                <box verticalHuggingPriority="750" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="7e4-oj-SYx">
+                    <rect key="frame" x="0.0" y="-2" width="388" height="5"/>
                     <animations/>
                     <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                     <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <font key="titleFont" metaFont="system"/>
                 </box>
-                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="msc-JY-zSx">
-                    <rect key="frame" x="55" y="50" width="278" height="159"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="278" id="6hk-9t-sBS"/>
-                        <constraint firstAttribute="height" priority="500" constant="159" id="lsU-vb-IVV"/>
-                    </constraints>
-                    <animations/>
-                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="7X0-7f-rdX"/>
-                </imageView>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="FlZ-mJ-FST" userLabel="Date">
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="YxP-fp-ptv" userLabel="Date">
                     <rect key="frame" x="18" y="12" width="60" height="16"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="16" id="Fbs-Nb-KWw"/>
+                        <constraint firstAttribute="height" constant="16" id="aav-yV-JoC"/>
                     </constraints>
                     <animations/>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" id="mdv-UX-RiY">
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" id="Z67-5W-03a">
                         <font key="font" metaFont="cellTitle"/>
                         <color key="textColor" white="0.0" alpha="0.5" colorSpace="calibratedWhite"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4Dl-eW-3A9">
+                    <rect key="frame" x="32" y="49" width="323" height="135"/>
+                    <animations/>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="1Ve-pC-9IP"/>
+                </imageView>
             </subviews>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="FlZ-mJ-FST" secondAttribute="trailing" priority="500" constant="312" id="9in-3F-8Yr"/>
-                <constraint firstItem="FlZ-mJ-FST" firstAttribute="leading" secondItem="7Iv-xv-FhU" secondAttribute="leading" constant="20" symbolic="YES" id="Fic-0V-jAg"/>
-                <constraint firstItem="msc-JY-zSx" firstAttribute="top" secondItem="7Iv-xv-FhU" secondAttribute="top" constant="20" id="R4c-Y5-f3A"/>
-                <constraint firstItem="FlZ-mJ-FST" firstAttribute="top" secondItem="msc-JY-zSx" secondAttribute="bottom" constant="22" id="UPn-E5-b24"/>
-                <constraint firstAttribute="trailing" secondItem="eLK-fP-ldB" secondAttribute="trailing" id="acF-Qa-qXo"/>
-                <constraint firstItem="eLK-fP-ldB" firstAttribute="top" secondItem="FlZ-mJ-FST" secondAttribute="bottom" constant="10" id="bM5-nk-KNa"/>
-                <constraint firstItem="eLK-fP-ldB" firstAttribute="centerX" secondItem="msc-JY-zSx" secondAttribute="centerX" id="luQ-aP-ksg"/>
-                <constraint firstItem="eLK-fP-ldB" firstAttribute="leading" secondItem="7Iv-xv-FhU" secondAttribute="leading" id="u0q-G2-lnT"/>
+                <constraint firstItem="YxP-fp-ptv" firstAttribute="leading" secondItem="MQN-iK-It3" secondAttribute="leading" constant="20" symbolic="YES" id="92Q-cy-Gad"/>
+                <constraint firstAttribute="trailing" secondItem="4Dl-eW-3A9" secondAttribute="trailing" constant="33" id="C63-xj-rhh"/>
+                <constraint firstItem="7e4-oj-SYx" firstAttribute="top" relation="lessThanOrEqual" secondItem="YxP-fp-ptv" secondAttribute="bottom" constant="19" id="EJn-hG-X6e"/>
+                <constraint firstItem="4Dl-eW-3A9" firstAttribute="leading" secondItem="MQN-iK-It3" secondAttribute="leading" constant="32" id="FJ5-bQ-G0L"/>
+                <constraint firstItem="YxP-fp-ptv" firstAttribute="top" secondItem="4Dl-eW-3A9" secondAttribute="bottom" constant="21" id="IdN-k9-2cZ"/>
+                <constraint firstAttribute="trailing" secondItem="7e4-oj-SYx" secondAttribute="trailing" id="Ki1-Lu-1aI"/>
+                <constraint firstItem="4Dl-eW-3A9" firstAttribute="top" secondItem="MQN-iK-It3" secondAttribute="top" constant="20" id="Sj6-GQ-MV5"/>
+                <constraint firstAttribute="bottom" secondItem="7e4-oj-SYx" secondAttribute="bottom" id="f0I-tR-1Xr"/>
+                <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="YxP-fp-ptv" secondAttribute="trailing" priority="500" constant="312" id="nha-1W-By5"/>
+                <constraint firstItem="7e4-oj-SYx" firstAttribute="top" secondItem="YxP-fp-ptv" secondAttribute="bottom" constant="11" id="rIt-g8-p09"/>
+                <constraint firstItem="7e4-oj-SYx" firstAttribute="leading" secondItem="MQN-iK-It3" secondAttribute="leading" id="smB-bR-ebb"/>
             </constraints>
             <animations/>
-            <point key="canvasLocation" x="415" y="283.5"/>
+            <point key="canvasLocation" x="423" y="316"/>
         </view>
     </objects>
 </document>
