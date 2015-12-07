@@ -21,6 +21,8 @@
 		02F3508C1C145F2E008A88DD /* PasteboardServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F3508B1C145F2E008A88DD /* PasteboardServiceTests.swift */; };
 		02F3508E1C14804A008A88DD /* PasteViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F3508D1C14804A008A88DD /* PasteViewModelTests.swift */; };
 		02F350901C148A40008A88DD /* PasteboardItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F3508F1C148A40008A88DD /* PasteboardItemTests.swift */; };
+		02F350921C157724008A88DD /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02F350911C157724008A88DD /* MainViewController.xib */; };
+		02F350941C157896008A88DD /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F350931C157896008A88DD /* MainViewController.swift */; };
 		02F54B6A1C00BFD400093553 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02F54B691C00BFD400093553 /* MainMenu.xib */; };
 		02F54B6C1C00C24E00093553 /* PasteboardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02F54B6B1C00C24E00093553 /* PasteboardViewController.xib */; };
 		02F54B701C00C6E100093553 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02F54B6F1C00C6E100093553 /* Assets.xcassets */; };
@@ -69,6 +71,8 @@
 		02F3508B1C145F2E008A88DD /* PasteboardServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasteboardServiceTests.swift; sourceTree = "<group>"; };
 		02F3508D1C14804A008A88DD /* PasteViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasteViewModelTests.swift; sourceTree = "<group>"; };
 		02F3508F1C148A40008A88DD /* PasteboardItemTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasteboardItemTests.swift; sourceTree = "<group>"; };
+		02F350911C157724008A88DD /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		02F350931C157896008A88DD /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		02F54B691C00BFD400093553 /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
 		02F54B6B1C00C24E00093553 /* PasteboardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PasteboardViewController.xib; sourceTree = "<group>"; };
 		02F54B6F1C00C6E100093553 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -175,15 +179,25 @@
 		02CD87461BEFA99600C149AF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				02F350951C15789E008A88DD /* XIB */,
 				791F31431C049C8B004AA9E2 /* Popover */,
+				02F350931C157896008A88DD /* MainViewController.swift */,
 				02C488891BE21A0F004FD281 /* PasteboardViewController.swift */,
 				02AF8C7D1C0DF1EC00BEDE2E /* PasteboardCollectionViewItem.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		02F350951C15789E008A88DD /* XIB */ = {
+			isa = PBXGroup;
+			children = (
 				02CD87471BEFDA6700C149AF /* ImageItemCell.xib */,
 				02F54B691C00BFD400093553 /* MainMenu.xib */,
 				02F54B6B1C00C24E00093553 /* PasteboardViewController.xib */,
 				02CD87431BEFA3D700C149AF /* TextItemCell.xib */,
+				02F350911C157724008A88DD /* MainViewController.xib */,
 			);
-			name = View;
+			name = XIB;
 			sourceTree = "<group>";
 		};
 		791F31431C049C8B004AA9E2 /* Popover */ = {
@@ -278,6 +292,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				02CD87481BEFDA6700C149AF /* ImageItemCell.xib in Resources */,
+				02F350921C157724008A88DD /* MainViewController.xib in Resources */,
 				02F54B6C1C00C24E00093553 /* PasteboardViewController.xib in Resources */,
 				02CD87441BEFA3D700C149AF /* TextItemCell.xib in Resources */,
 				02F54B6A1C00BFD400093553 /* MainMenu.xib in Resources */,
@@ -305,6 +320,7 @@
 				02C4888A1BE21A0F004FD281 /* PasteboardViewController.swift in Sources */,
 				02C488881BE21A0F004FD281 /* AppDelegate.swift in Sources */,
 				02801C351C0354F7000817CE /* PasteViewModel.swift in Sources */,
+				02F350941C157896008A88DD /* MainViewController.swift in Sources */,
 				026771D21BE924D5002B79F4 /* PasteboardService.swift in Sources */,
 				02801C321C035333000817CE /* PasteboardItem.swift in Sources */,
 			);

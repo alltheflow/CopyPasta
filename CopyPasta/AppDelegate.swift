@@ -18,9 +18,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(aNotification: NSNotification) {
         statusItem.button!.image = NSImage(named: "pasta_icon")
         statusItem.button!.action = Selector("togglePopover:")
-
+        
+        let mainViewController = MainViewController(nibName: "MainViewController", bundle: nil)
         popover.behavior = .Semitransient
-        popover.contentViewController = PasteboardViewController(nibName: "PasteboardViewController", bundle: nil)
+        popover.contentViewController = mainViewController
     }
 
     func applicationWillTerminate(aNotification: NSNotification) { }
@@ -37,12 +38,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     func openPopover(sender: AnyObject?) {
         popover.showRelativeToRect(statusItem.button!.bounds, ofView: statusItem.button!, preferredEdge: .MinY)
-        
+
         guard popoverTransiencyMonitor == nil else {
             return
         }
         
-        popoverTransiencyMonitor = NSEvent.addGlobalMonitorForEventsMatchingMask([.RightMouseDownMask, .LeftMouseDownMask]) {_ in
+        popoverTransiencyMonitor = NSEvent.addGlobalMonitorForEventsMatchingMask([.RightMouseDownMask, .LeftMouseDownMask]) { _ in
             self.closePopover(sender)
         }
     }
@@ -57,6 +58,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         NSEvent.removeMonitor(monitor)
         popoverTransiencyMonitor = nil
     }
+
     
 }
-
