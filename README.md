@@ -14,6 +14,6 @@ carthage update --platform mac
 
 ## App
 
-Lists your pasteboard items. Select any and it jumps back to the top of the stack and you'll be able to paste it everywhere in OS X.
+Lists your pasteboard items. Select any, it will jump back to the top of the stack and you'll be able to paste it anywhere in OS X.
 
 ![CopyPasta in action](https://cloud.githubusercontent.com/assets/1460573/11615326/bad4be3a-9c5d-11e5-98ce-dac5c9fea45b.png)
