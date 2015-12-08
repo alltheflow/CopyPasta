@@ -18,21 +18,21 @@ class PasteViewModel {
         }        
     }
     
-    func pasteboardItems() -> Hub<[PasteboardItem]> {
+    var pasteboardItems: Hub<[PasteboardItem]> {
         return pasteboardService.pasteboardItems
     }
 
-    func items() -> [PasteboardItem] {
-        return pasteboardItems()*
+    var items: [PasteboardItem] {
+        return pasteboardItems*
     }
 
     func selectItemAtIndex(index: Int) {
-        let item = self.items()[index]
+        let item = self.items[index]
         pasteboardService.addItemToPasteboard(item)
     }
 
     func itemAtIndex(index: Int) -> PasteboardItem {
-        return self.items()[index]
+        return self.items[index]
     }
 
 }
