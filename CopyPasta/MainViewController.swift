@@ -11,7 +11,8 @@ import Cocoa
 class MainViewController: NSViewController {
 
     @IBOutlet weak var contentView: NSView!
-    
+    @IBOutlet weak var settingsButton: NSButton!
+
     override func awakeFromNib() {
         let pasteboardViewController = PasteboardViewController(nibName: "PasteboardViewController", bundle: nil)
         contentView.addSubview(pasteboardViewController.view)

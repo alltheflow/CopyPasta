@@ -8,6 +8,7 @@
         <customObject id="-2" userLabel="File's Owner" customClass="MainViewController" customModule="CopyPasta" customModuleProvider="target">
             <connections>
                 <outlet property="contentView" destination="6B0-db-kaA" id="pzN-wl-KlL"/>
+                <outlet property="settingsButton" destination="xMG-XF-fwl" id="eZm-Sg-4JD"/>
                 <outlet property="view" destination="c22-O7-iKe" id="SnN-c6-HcK"/>
             </connections>
         </customObject>
@@ -20,7 +21,7 @@
                 <customView translatesAutoresizingMaskIntoConstraints="NO" id="0Ci-Gl-0eF">
                     <rect key="frame" x="0.0" y="514" width="388" height="50"/>
                     <subviews>
-                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xMG-XF-fwl">
+                        <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="xMG-XF-fwl">
                             <rect key="frame" x="344" y="16" width="32" height="19"/>
                             <animations/>
                             <buttonCell key="cell" type="roundRect" bezelStyle="roundedRect" image="NSAdvanced" imagePosition="overlaps" alignment="center" imageScaling="proportionallyDown" inset="2" id="7OL-ew-UkF">
@@ -28,7 +29,21 @@
                                 <font key="font" metaFont="cellTitle"/>
                             </buttonCell>
                         </button>
+                        <box verticalHuggingPriority="750" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="toV-ZJ-cUa">
+                            <rect key="frame" x="0.0" y="0.0" width="388" height="5"/>
+                            <animations/>
+                            <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                            <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <font key="titleFont" metaFont="system"/>
+                        </box>
                     </subviews>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="xMG-XF-fwl" secondAttribute="trailing" constant="12" id="9KD-5x-ote"/>
+                        <constraint firstItem="toV-ZJ-cUa" firstAttribute="centerX" secondItem="0Ci-Gl-0eF" secondAttribute="centerX" id="Ft2-jB-9gV"/>
+                        <constraint firstItem="toV-ZJ-cUa" firstAttribute="top" secondItem="xMG-XF-fwl" secondAttribute="bottom" constant="13" id="Jyb-gy-axm"/>
+                        <constraint firstAttribute="bottom" secondItem="toV-ZJ-cUa" secondAttribute="bottom" constant="2" id="UoA-gp-Lut"/>
+                        <constraint firstItem="toV-ZJ-cUa" firstAttribute="leading" secondItem="0Ci-Gl-0eF" secondAttribute="leading" id="wzT-Ua-Wgl"/>
+                    </constraints>
                     <animations/>
                 </customView>
                 <customView translatesAutoresizingMaskIntoConstraints="NO" id="6B0-db-kaA">
@@ -47,7 +62,7 @@
                 <constraint firstAttribute="bottom" secondItem="0Ci-Gl-0eF" secondAttribute="bottom" constant="514" id="yaR-49-g10"/>
             </constraints>
             <animations/>
-            <point key="canvasLocation" x="477" y="421"/>
+            <point key="canvasLocation" x="381" y="201"/>
         </customView>
     </objects>
     <resources>
