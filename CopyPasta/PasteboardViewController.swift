@@ -31,13 +31,13 @@ class PasteboardViewController: NSViewController, NSCollectionViewDataSource, NS
         collectionView.registerNib(textItemNib, forItemWithIdentifier: textItemCellID)
         collectionView.registerNib(imageItemNib, forItemWithIdentifier: imageItemCellID)
 
-        pasteViewModel.pasteboardItems.dispatchOnMainQueue().onChange { _ in self.collectionView.reloadData() }
+        pasteViewModel.pasteboardItems().dispatchOnMainQueue().onChange { _ in self.collectionView.reloadData() }
     }
 
     // MARK: NSCollectionViewDataSource
 
     func collectionView(collectionView: NSCollectionView, numberOfItemsInSection section: Int) -> Int {
-        return pasteViewModel.items.count
+        return pasteViewModel.items().count
     }
 
     func collectionView(collectionView: NSCollectionView, itemForRepresentedObjectAtIndexPath indexPath: NSIndexPath) -> NSCollectionViewItem {
@@ -60,7 +60,7 @@ class PasteboardViewController: NSViewController, NSCollectionViewDataSource, NS
     }
     
     func collectionView(collectionView: NSCollectionView, layout collectionViewLayout: NSCollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> NSSize {
-        let items = pasteViewModel.items
+        let items = pasteViewModel.items()
         return sizeForItem(items[indexPath.item])
     }
 
