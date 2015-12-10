@@ -9,19 +9,23 @@
 import XCTest
 @testable import CopyPasta
 
-class MockedPasteViewModel: PasteViewModel {
-    override func items() -> [PasteboardItem] {
-        return [.Text("copy"), .Text("pasta")]
-    }
-}
-
 class PasteViewModelTests: XCTestCase {
 
-    let pasteViewModel = MockedPasteViewModel()
+    let pasteViewModel = PasteViewModel()
+    let pasteboard = NSPasteboard.generalPasteboard()
+    
+    override func setUp() {
+        super.setUp()
+        pasteboard.clearContents()
+        pasteboard.writeObjects(["copy", "pasta"])
+        pasteViewModel.pasteboardService.pollPasteboardItems()
+    }
     
     func testSelectItemAtIndex() {
-        pasteViewModel.selectItemAtIndex(0)
-        XCTAssertTrue(pasteViewModel.items()[0] == .Text("copy"), "it should readd existing items")
+        pasteViewModel.selectItemAtIndex(1)
+
+        XCTAssertTrue(pasteViewModel.items()[0] == .Text("pasta"), "it should readd existing items")
+        XCTAssertTrue(pasteViewModel.items().count == 2, "it should not duplicate readded item")
     }
 
 }

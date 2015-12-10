@@ -152,9 +152,9 @@
 			isa = PBXGroup;
 			children = (
 				02C4889B1BE21A0F004FD281 /* Info.plist */,
+				02F3508F1C148A40008A88DD /* PasteboardItemTests.swift */,
 				02F3508B1C145F2E008A88DD /* PasteboardServiceTests.swift */,
 				02F3508D1C14804A008A88DD /* PasteViewModelTests.swift */,
-				02F3508F1C148A40008A88DD /* PasteboardItemTests.swift */,
 			);
 			path = CopyPastaTests;
 			sourceTree = "<group>";
