@@ -28,15 +28,14 @@ class PasteboardService {
             return
         }
 
-        items.map { i in
-            if let item = pasteboardItem(i) {
-                pasteboardItems <- pasteboardItems*
-                    .filter { $0 != item }
-                    .arrayByPrepending(item)
-                changeCount <- pasteboard.changeCount
-            }
+        guard let item = pasteboardItem(items.first) else {
+            return
         }
 
+        pasteboardItems <- pasteboardItems*
+            .filter { $0 != item }
+            .arrayByPrepending(item)
+        changeCount <- pasteboard.changeCount
     }
 
     func addItemToPasteboard(item: PasteboardItem) {

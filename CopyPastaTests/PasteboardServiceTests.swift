@@ -12,20 +12,14 @@ import VinceRP
 
 class PasteboardServiceTests: XCTestCase {
 
-    let pasteboardService = PasteboardService()
-
-    override func setUp() {
-        super.setUp()
-        pasteboardService.pasteboard.clearContents()
-        pasteboardService.pasteboardItems <- [.Text("copy")]
-    }
-
     func addItemToPasteboard() {
+        let pasteboardService = PasteboardService()
         pasteboardService.addItemToPasteboard(.Text("pasta"))
         XCTAssertTrue(pasteboardService.pasteboardItems.value()[0] == .Text("pasta"), "it should add new items")
     }
 
     func testpollPasteboardItems() {
+        let pasteboardService = PasteboardService()
         pasteboardService.pasteboard.writeObjects(["pasta" as NSPasteboardWriting])
         pasteboardService.pollPasteboardItems()
 
