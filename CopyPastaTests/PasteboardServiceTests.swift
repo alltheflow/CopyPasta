@@ -18,12 +18,4 @@ class PasteboardServiceTests: XCTestCase {
         XCTAssertTrue(pasteboardService.pasteboardItems.value()[0] == .Text("pasta"), "it should add new items")
     }
 
-    func testpollPasteboardItems() {
-        let pasteboardService = PasteboardService()
-        pasteboardService.pasteboard.writeObjects(["pasta" as NSPasteboardWriting])
-        pasteboardService.pollPasteboardItems()
-
-        XCTAssertTrue(pasteboardService.pasteboardItems.value()[0] == .Text("pasta"), "it should poll new items")
-    }
-
 }

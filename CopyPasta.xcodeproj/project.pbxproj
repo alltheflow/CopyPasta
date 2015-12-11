@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		026771D21BE924D5002B79F4 /* PasteboardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026771D11BE924D5002B79F4 /* PasteboardService.swift */; };
+		027FDAEB1C1B95EA008DD0E0 /* PasteboardPollingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027FDAEA1C1B95EA008DD0E0 /* PasteboardPollingTests.swift */; };
 		02801C321C035333000817CE /* PasteboardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02801C311C035333000817CE /* PasteboardItem.swift */; };
 		02801C351C0354F7000817CE /* PasteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02801C341C0354F7000817CE /* PasteViewModel.swift */; };
 		02AF8C7C1C0B09DA00BEDE2E /* vincerp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02C8B3901BE3FAE800203CF2 /* vincerp.framework */; };
@@ -56,6 +57,7 @@
 
 /* Begin PBXFileReference section */
 		026771D11BE924D5002B79F4 /* PasteboardService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasteboardService.swift; sourceTree = "<group>"; };
+		027FDAEA1C1B95EA008DD0E0 /* PasteboardPollingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasteboardPollingTests.swift; sourceTree = "<group>"; };
 		02801C311C035333000817CE /* PasteboardItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasteboardItem.swift; sourceTree = "<group>"; };
 		02801C341C0354F7000817CE /* PasteViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasteViewModel.swift; sourceTree = "<group>"; };
 		02AF8C7D1C0DF1EC00BEDE2E /* PasteboardCollectionViewItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasteboardCollectionViewItem.swift; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 				02F3508F1C148A40008A88DD /* PasteboardItemTests.swift */,
 				02F3508B1C145F2E008A88DD /* PasteboardServiceTests.swift */,
 				02F3508D1C14804A008A88DD /* PasteViewModelTests.swift */,
+				027FDAEA1C1B95EA008DD0E0 /* PasteboardPollingTests.swift */,
 			);
 			path = CopyPastaTests;
 			sourceTree = "<group>";
@@ -330,6 +333,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				027FDAEB1C1B95EA008DD0E0 /* PasteboardPollingTests.swift in Sources */,
 				02F3508E1C14804A008A88DD /* PasteViewModelTests.swift in Sources */,
 				02F3508C1C145F2E008A88DD /* PasteboardServiceTests.swift in Sources */,
 				02F350901C148A40008A88DD /* PasteboardItemTests.swift in Sources */,
