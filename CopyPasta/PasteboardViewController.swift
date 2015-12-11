@@ -7,6 +7,7 @@
 //
 
 import Cocoa
+import VinceRP
 
 class PasteboardViewController: NSViewController, NSCollectionViewDataSource, NSCollectionViewDelegate, NSCollectionViewDelegateFlowLayout {
 
@@ -15,6 +16,7 @@ class PasteboardViewController: NSViewController, NSCollectionViewDataSource, NS
     let pasteViewModel = PasteViewModel()
     
     @IBOutlet weak var collectionView: NSCollectionView!
+    @IBOutlet weak var countLabel: NSTextField!
 
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)!
@@ -31,7 +33,15 @@ class PasteboardViewController: NSViewController, NSCollectionViewDataSource, NS
         collectionView.registerNib(textItemNib, forItemWithIdentifier: textItemCellID)
         collectionView.registerNib(imageItemNib, forItemWithIdentifier: imageItemCellID)
 
-        pasteViewModel.pasteboardItems().dispatchOnMainQueue().onChange { _ in self.collectionView.reloadData() }
+        pasteViewModel.pasteboardItems()
+            .dispatchOnMainQueue().onChange { _ in self.collectionView.reloadData() }
+        
+        countLabel.reactiveHidden = pasteViewModel.pasteboardItems()
+            .map { $0.count == 0 }
+
+        countLabel.reactiveText = pasteViewModel.pasteboardItems()
+            .dispatchOnMainQueue()
+            .map { "\($0.count) items" }
     }
 
     // MARK: NSCollectionViewDataSource
