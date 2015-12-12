@@ -36,12 +36,8 @@ class PasteboardViewController: NSViewController, NSCollectionViewDataSource, NS
         pasteViewModel.pasteboardItems()
             .dispatchOnMainQueue().onChange { _ in self.collectionView.reloadData() }
         
-        countLabel.reactiveHidden = pasteViewModel.pasteboardItems()
-            .map { $0.count == 0 }
-
-        countLabel.reactiveText = pasteViewModel.pasteboardItems()
-            .dispatchOnMainQueue()
-            .map { "\($0.count) items" }
+        countLabel.reactiveHidden = pasteViewModel.countHidden()
+        countLabel.reactiveText = pasteViewModel.itemCountString()
     }
 
     // MARK: NSCollectionViewDataSource

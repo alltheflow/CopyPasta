@@ -9,6 +9,8 @@
 import Cocoa
 import VinceRP
 
+typealias observable = Hub<[PasteboardItem]>
+
 class PasteboardService {
 
     let pasteboard = NSPasteboard.generalPasteboard()
@@ -51,7 +53,7 @@ class PasteboardService {
         pollPasteboardItems()
     }
 
-    func items() -> Hub<[PasteboardItem]> {
+    func items() -> observable {
         return self.pasteboardItems
     }
 

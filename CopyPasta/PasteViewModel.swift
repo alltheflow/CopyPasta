@@ -18,12 +18,22 @@ class PasteViewModel {
         }        
     }
     
-    func pasteboardItems() -> Hub<[PasteboardItem]> {
+    func pasteboardItems() -> observable {
         return pasteboardService.pasteboardItems
     }
 
     func items() -> [PasteboardItem] {
         return pasteboardItems()*
+    }
+
+    func countHidden() -> Hub<Bool> {
+        return pasteboardItems().map { $0.count == 0 }
+    }
+
+    func itemCountString() -> Hub<String> {
+        return pasteboardItems()
+            .dispatchOnMainQueue()
+            .map { "\($0.count) items" }
     }
 
     func selectItemAtIndex(index: Int) {
