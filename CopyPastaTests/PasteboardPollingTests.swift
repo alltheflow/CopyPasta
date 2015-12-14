@@ -17,7 +17,8 @@ class PasteboardPollingTests: XCTestCase {
 
         pasteboardService.pollPasteboardItems()
 
-        XCTAssertTrue(pasteboardService.pasteboardItems.value()[0] == .Text("pasta"), "it should poll the new item")
+        XCTAssertNotNil(pasteboardService.pasteboardItems.value()[0], "it should have an item")
+        XCTAssertTrue(pasteboardService.pasteboardItems.value()[0] == .Text("pasta"), "it should poll the new item as pasteboarditem")
     }
 
 }
