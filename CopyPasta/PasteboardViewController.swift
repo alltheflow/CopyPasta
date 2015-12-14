@@ -91,7 +91,7 @@ class PasteboardViewController: NSViewController, NSCollectionViewDataSource, NS
             case .Text(let text):
                 let font = NSFont.systemFontOfSize(13)
                 let textHeight = text.heightWithConstrainedWidth(348.0, font:font)
-                return textHeight < 150 ? textHeight + 70 : 150
+                return textHeight < 150 ? textHeight + 90 : 150
             case .Image(let image):
                 return h > 159.0 ? 159.0 : image.size.height
             default: return h
