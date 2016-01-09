@@ -1,5 +1,7 @@
 ![CopyPasta](https://cloud.githubusercontent.com/assets/1460573/11615156/7a3b6454-9c59-11e5-95fa-0780af681f2e.png)
 
+[![Bitrise](https://www.bitrise.io/appd78e051b3ee27e5e.svg?token=9MT0hRDGtgJZXhC_JQJNFA&branch=master)](https://www.bitrise.io/) 
+
 Just a basic pasteboard feed. Check out the blogpost about its purpose on [alltheflow blog](https://blog.alltheflow.com/lightweight-reactive-coding-with-swift-and-vincerp/).
 
 ## Install with [Carthage](https://github.com/Carthage/Carthage)
