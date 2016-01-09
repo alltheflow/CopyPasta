@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="9531" systemVersion="15B42" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9531"/>
@@ -15,11 +15,11 @@
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <view id="GiI-00-Etf">
-            <rect key="frame" x="0.0" y="0.0" width="388" height="562"/>
+            <rect key="frame" x="0.0" y="0.0" width="388" height="572"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Y4S-cm-9FV">
-                    <rect key="frame" x="0.0" y="0.0" width="390" height="20"/>
+                    <rect key="frame" x="0.0" y="27" width="390" height="20"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="20" id="N6R-oe-xgh"/>
                     </constraints>
@@ -30,13 +30,13 @@
                     </textFieldCell>
                 </textField>
                 <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jG1-2X-yCP">
-                    <rect key="frame" x="0.0" y="20" width="388" height="542"/>
+                    <rect key="frame" x="0.0" y="57" width="388" height="515"/>
                     <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="oEG-tT-hIM">
-                        <rect key="frame" x="0.0" y="0.0" width="388" height="542"/>
+                        <rect key="frame" x="0.0" y="0.0" width="388" height="515"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView selectable="YES" id="2Ud-RC-71x">
-                                <rect key="frame" x="0.0" y="0.0" width="388" height="542"/>
+                                <rect key="frame" x="0.0" y="0.0" width="388" height="525"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" id="s7h-k0-I2h">
                                     <size key="itemSize" width="388" height="50"/>
@@ -52,22 +52,39 @@
                     </clipView>
                     <constraints>
                         <constraint firstAttribute="width" constant="388" id="EJf-b5-VKD"/>
-                        <constraint firstAttribute="height" constant="542" id="LtD-Jd-too"/>
+                        <constraint firstAttribute="height" constant="515" id="LtD-Jd-too"/>
                     </constraints>
                     <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="ggZ-Lb-Dzf">
-                        <rect key="frame" x="1" y="144" width="233" height="15"/>
+                        <rect key="frame" x="0.0" y="500" width="373" height="15"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </scroller>
-                    <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="P53-G8-9Fo">
-                        <rect key="frame" x="234" y="1" width="15" height="143"/>
+                    <scroller key="verticalScroller" verticalHuggingPriority="750" horizontal="NO" id="P53-G8-9Fo">
+                        <rect key="frame" x="372" y="0.0" width="16" height="515"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </scroller>
                 </scrollView>
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="aRE-Wg-2We">
+                    <rect key="frame" x="0.0" y="0.0" width="388" height="27"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="388" id="7c6-9x-YDv"/>
+                        <constraint firstAttribute="height" constant="27" id="VUP-rQ-1eY"/>
+                    </constraints>
+                    <buttonCell key="cell" type="bevel" title="Quit" bezelStyle="rounded" alignment="center" imageScaling="proportionallyDown" inset="2" id="UEs-9U-zdM">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="quit:" target="-2" id="oxB-dR-ziF"/>
+                    </connections>
+                </button>
             </subviews>
             <constraints>
+                <constraint firstAttribute="bottom" secondItem="aRE-Wg-2We" secondAttribute="bottom" id="Hzd-wu-4kH"/>
+                <constraint firstItem="aRE-Wg-2We" firstAttribute="top" secondItem="Y4S-cm-9FV" secondAttribute="bottom" id="Lgs-Zu-aK5"/>
                 <constraint firstItem="Y4S-cm-9FV" firstAttribute="top" secondItem="2Ud-RC-71x" secondAttribute="bottom" id="eO1-CY-xCj"/>
                 <constraint firstItem="jG1-2X-yCP" firstAttribute="top" secondItem="GiI-00-Etf" secondAttribute="top" id="gA8-0Y-f6O"/>
                 <constraint firstItem="jG1-2X-yCP" firstAttribute="leading" secondItem="GiI-00-Etf" secondAttribute="leading" id="qBC-E2-ha2"/>
+                <constraint firstItem="aRE-Wg-2We" firstAttribute="centerX" secondItem="jG1-2X-yCP" secondAttribute="centerX" id="sKO-Fo-mvY"/>
                 <constraint firstItem="Y4S-cm-9FV" firstAttribute="leading" secondItem="GiI-00-Etf" secondAttribute="leading" constant="2" id="wka-1N-iEL"/>
                 <constraint firstItem="Y4S-cm-9FV" firstAttribute="trailing" secondItem="jG1-2X-yCP" secondAttribute="trailing" id="xvh-6f-KTJ"/>
             </constraints>

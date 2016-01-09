@@ -102,5 +102,9 @@ class PasteboardViewController: NSViewController, NSCollectionViewDataSource, NS
         let w = collectionView.frame.size.width
         return NSSize(width: w, height: heightForItem(item))
     }
+    
+    @IBAction func quit(sender: AnyObject) {
+        NSApplication.sharedApplication().terminate(sender)
+    }
 
 }
