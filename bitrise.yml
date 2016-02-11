@@ -15,7 +15,7 @@ trigger_map:
 workflows:
   test:
     steps:
-    - git::https://github.com/vasarhelyia/steps-carthage.git@1.0.4:
+    - git::https://github.com/vasarhelyia/steps-carthage.git@1.0.8:
         title: Carthage
         inputs:
         - carthage_command: update
